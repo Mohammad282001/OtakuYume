@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANIMOVES</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/styles/MovieDetiles.css" />
+</head>
+
+<body>
+  <!-- navbar -->
+  <div class="navbar" id="navbar">
+    <div class="navbar-container">
+      <div class="logo-container">
+        <h1 id="logo"></h1>
+        ANIMOVES
+      </div>
+      <div class="menu-container">
+        <ul class="ulNavbar"></ul>
+        <li class="liNavbar active">Home</li>
+        <li class="liNavbar">Movies</li>
+        <li class="liNavbar">Series</li>
+      </div>
+
+      <div class="profile-container">
+        <div>
+          <span class="fas fa-search"> </span>
+          <span class="fas fa-bell"></span>
+        </div>
+        <div>
+          <img id="user-picture" src="../assets/images/user.png" alt="" />
+          <i class="fas fa-caret-down"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- sidebar -->
+  <div class="sidebar" id="sidebar"></div>
+
+  <!-- containar -->
+  <!-- ======= Movie detiles start =========== -->
+  <div class="containar">
+    <!-- ----------------------Movie details start---------------- -->
+
+
+
+    <!----------------------image----------------------
+        <img src="../assets/images/Video.png" class="card-img-top" alt="..." />
+      -------------------/image------------------------>
+    <div class="card" style="
+                width: 60rem;
+                background-color: #0d0c0f;
+                margin: 0 auto;
+                margin-top: 3rem;
+              " id="imageDetiles">
+      <div id="imageANDdetiles" style="display: flex;">
+        <div class="card-body d-flex justify-content-center align-items-center">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <!----------------title------------------->
+                <h4 style="
+                            color: #ffffff;
+                            text-align: left;
+                            padding-bottom: 0.25rem;
+                          " id="titleDetiles">
+                </h4>
+                <!----------------/title------------------->
+
+                <h6 style="
+                            color: #ffffff;
+                            text-align: left;
+                            font-size: small;
+                            padding-bottom: 0.25rem;
+                          " id="category" ;><!------------------category------------------>
+                  <i class="bi bi-film"></i> <!--Action • Crime -->
+                  <!-------------------category----------------->
+                </h6>
+
+                <h6 style="
+                            color: #ffffff;
+                            text-align: left;
+                            font-size: small;
+                            padding-bottom: 0.25rem;
+                          ">
+                  <!-- episodes -->
+                  <p id="episodes-id">Episodes
+                  <p id="score">
+
+
+                    <!------------------------------------------------->
+                    <i class="bi bi-star-fill" style="color: yellow"></i>
+                    <!----------------------------------------------->
+                </h6>
+
+              </div>
+
+              <!-- ======= Like Shear button start =========== -->
+              <div class="col">
+                <p id="rating-id" style="color: #ffffff;"></p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+                  <button class="btn" style="
+                              background-color: #b43feb;
+                              color: white;
+                              border-radius: 10px;
+                              padding: 0 1.25rem;
+                            " type="button">
+                    <i class="bi bi-hand-thumbs-up"></i> Like
+                  </button>
+                  <button class="btn" style="
+                              background-color: #000000;
+                              color: white;
+                              box-shadow: 1px 1px 1px rgb(0, 0, 0);
+                              margin: 0 1.2rem;
+                              border: 1px solid rgb(255, 255, 255, 0.4);
+                              border-radius: 10px;
+                            " type="button">
+                    <i class="bi bi-share"></i> Share
+                  </button>
+                </div>
+              </div>
+              <!-- ======= Like Shear button end =========== -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- ======= story line start =========== -->
+      <div class="card" style="width: 56.5rem; background-color: #0d0c0f; margin: 0 auto">
+        <div class="content-containar" style="text-align: left">
+          <h6 style="
+                color: #ffffff;
+                text-align: left;
+                padding-bottom: 0.25rem;
+                font-weight: 600;
+              ">
+            Story Line
+          </h6>
+          <span id="synopsis-id" style="
+                color: #9ca4ab;
+                text-align: left;
+                font-size: small;
+                padding-bottom: 0.25rem;
+                font-weight: 400;
+                margin-right: 1rem;
+              ">
+          </span>
+        </div>
+        <br />
+      </div>
+      <!-- ======= story line end =========== -->
+
+      <br /><br />
+
+      <!-- ---------- Line start --------------- -->
+      <div class="card" style="
+            width: 56.5rem;
+            background-color: #ffffff;
+            margin: 0 auto;
+            height: 2px;
+            margin-top : 3rem;
+            margin-bottom : 1rem;
+            
+          "></div>
+      <!-- ---------- Line end --------------- -->
+
+
+
+      <br /><br />
+
+      <!-- ========== Reviews start ======== -->
+      <div class="card" style="width: 56.5rem; background-color: #0d0c0f; margin: 2 auto">
+        <div class="content-containar" style="text-align: left">
+          <h5 style="
+                color: #ffffff;
+                text-align: center;
+                padding-bottom: 0.25rem;
+                font-weight: 600;
+              ">
+            Reviews
+          </h5>
+        </div>
+      </div>
+
+      <div class="card-body d-flex justify-content-center align-items-center" style="margin-top: -45px">
+        <div class="container text-center">
+          <div class="row">
+
+            <!-- ======= write review button start =========== -->
+            <div class="card-body d-flex justify-content-center align-items-center">
+              <div class="container text-center">
+                <div class="row">
+                  <div class="col" style="
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      ">
+                    <h4 style="
+                          color: #ffffff;
+                          text-align: left;
+                          padding: 0.8rem 1.25rem;
+                        ">
+                      3 comments
+                    </h4>
+                  </div>
+                  <div class="col" style="
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      ">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      <button class="btn" style="
+                            background-color: #b43feb;
+                            color: white;
+                            border-radius: 10px;
+                            padding: 0.5rem 1.25rem;
+                          " onclick="openForm()">
+                        <i class="bi bi-chat-dots-fill"></i> Write Review
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- هذا هو ال Popup الذي سيظهر عند النقر على الزر -->
+            <div id="popup" class="popup">
+              <form id="form">
+                <div class="model-header">
+                  <br />
+                  <button class="close" onclick="closeForm()" style="color: #ffffff">
+                    X
+                  </button>
+                </div>
+
+                <!-- --------- user img end --------- -->
+
+                <!-- --------- comments text start --------- ------------------------------------------------------->
+                <div class="col" style="flex-basis: 60%">
+                  <div id="content-containar" id="MoComment" class="content-containar" style="text-align: left">
+                    <!-- <h6
+                      id="userText"
+                      style="
+
+                <br />
+                <textarea id="comment" placeholder="Write your comments.." required></textarea><br />
+                <button type="submit" class="btn">Submit Review</button>
+              </form>
+            </div>
+            <br /><br />
+          </div>
+          <!-- ======= comments start =========== -->
+          <div class="container text-center" style="width: 93%; margin-top: 40px">
+            <div class="row" style="display: flex">
+              <!-- --------- user img start --------- -->
+              <div class="col" style="flex-basis: 1%">
+                <img class="comments-user" src="../assets/images/user.png" alt="" />
+              </div>
+              <!-- --------- user img end --------- -->
+
+              <!-- --------- comments text start --------- -->
+              <div class="col" style="flex-basis: 60%">
+                <div id="content-containar" class="content-containar" style="text-align: left">
+                  <h6 id="userText" style="
+
+                        color: #ffffff;
+                        text-align: left;
+                        padding-bottom: 0.25rem;
+                        font-weight: 600;
+                      ">
+                    Story Line
+                  </h6>
+                  <span id="userComment" style="
+                        color: #9ca4ab;
+                        text-align: left;
+                        font-size: small;
+                        padding-bottom: 0.25rem;
+                        font-weight: 400;
+                        margin-right: 1rem;
+
+                      "
+                      >Originally a story from Archie Comics which started in
+                      1941, Riverdale centres around a group of high school
+                      students who are shocked by the death of classmate, Jason
+                      Blossom. Together theyunravel the secrets of Riverdale and
+                      who
+                      <span style="color: #b43feb"> ... More</span>
+                    </span> -->
+                  </div>
+                </div>
+                <!-- --------- comments text end ------------------------------------------------------------------ -->
+
+              
+
+                      ">Originally a story from Archie Comics which started in
+                    1941, Riverdale centres around a group of high school
+                    students who are shocked by the death of classmate, Jason
+                    Blossom. Together theyunravel the secrets of Riverdale and
+                    who
+                    <span style="color: #b43feb"> ... More</span>
+                  </span>
+                </div>
+              </div>
+              <!-- --------- comments text end --------- -->
+
+              <!-- --------- rate start --------- -->
+              <div class="col" style="flex-basis: 5%">
+                <h6 style="
+                      color: #ffffff;
+                      text-align: left;
+                      font-size: small;
+                      padding-bottom: 0.25rem;
+                    ">
+                  <i class="bi bi-star-fill" style="color: yellow"></i>
+                  <i class="bi bi-star-fill" style="color: yellow"></i>
+                  <i class="bi bi-star-fill" style="color: yellow"></i>
+                  <i class="bi bi-star-fill" style="color: yellow"></i>
+                  <i class="bi bi-star-fill" style="color: white"></i>
+                </h6>
+              </div>
+              <!-- --------- rate end --------- -->
+            </div>
+            <br />
+
+            <!-- ---------- Line start --------------- -->
+            <div class="col">
+              <div class="card" style="
+                    width: 50rem;
+                    background-color: rgb(255, 255, 255, 0.75);
+                    margin: 0 auto;
+                    height: 0.25px;
+                    margin-left: 1.25rem;
+                  "></div>
+            </div>
+            <!-- ---------- Line end --------------- -->
+          </div>
+          <!-- ======= comments end =========== -->
+          <br /><br />
+          <!-- ======= comments start =========== -->
+          <div class="container text-center" style="width: 93%">
+            <div class="row" style="display: flex">
+              <!-- --------- user img start --------- -->
+              <div class="col" style="flex-basis: 1%">
+                <img class="comments-user" src="../assets/images/user.png" alt="" />
+              </div>
+              <!-- --------- user img end --------- -->
+
+              <!-- --------- comments text start --------- -->
+              <div class="col" style="flex-basis: 60%">
+                <div class="content-containar" style="text-align: left">
+                  <h6 style="
+                        color: #ffffff;
+                        text-align: left;
+                        padding-bottom: 0.25rem;
+                        font-weight: 600;
+                      ">
+                    Story Line
+                  </h6>
+                  <span style="
+                        color: #9ca4ab;
+                        text-align: left;
+                        font-size: small;
+                        padding-bottom: 0.25rem;
+                        font-weight: 400;
+                        margin-right: 1rem;
+                      ">Originally a story from Archie Comics which started in
+                    1941, Riverdale centres around a group of high school
+                    students who are shocked by the death of classmate, Jason
+                    Blossom. Together theyunravel the secrets of Riverdale and
+                    who
+                    <span style="color: #b43feb"> ... More</span>
+                  </span>
+                </div>
+              </div>
+              <!-- --------- comments text end --------- -->
+
+              <!-- --------- rate start --------- -->
+              <div class="col" style="flex-basis: 5%">
+                <h6 style="
+                      color: #ffffff;
+                      text-align: left;
+                      font-size: small;
+                      padding-bottom: 0.25rem;
+                    ">
+                  <i class="bi bi-star-fill" style="color: yellow"></i>
+                  <i class="bi bi-star-fill" style="color: yellow"></i>
+                  <i class="bi bi-star-fill" style="color: yellow"></i>
+                  <i class="bi bi-star-fill" style="color: yellow"></i>
+                  <i class="bi bi-star-fill" style="color: white"></i>
+                </h6>
+              </div>
+              <!-- --------- rate end --------- -->
+            </div>
+            <br />
+            <!-- ---------- Line start --------------- -->
+            <div class="col">
+              <div class="card" style="
+                    width: 50rem;
+                    background-color: rgb(255, 255, 255, 0.75);
+                    margin: 0 auto;
+                    height: 0.25px;
+                    margin-left: 1.25rem;
+                  "></div>
+            </div>
+            <!-- ---------- Line end --------------- -->
+          </div>
+          <!-- ======= comments end =========== -->
+          <br /><br />
+          <!-- ======= comments start =========== -->
+          <div class="container text-center" style="width: 93%">
+            <div class="row" style="display: flex">
+              <!-- --------- user img start --------- -->
+              <div class="col" style="flex-basis: 1%">
+                <img class="comments-user" src="../assets/images/user.png" alt="" />
+              </div>
+              <!-- --------- user img end --------- -->
+
+              <!-- --------- comments text start --------- -->
+              <div class="col" style="flex-basis: 60%">
+                <div class="content-containar" style="text-align: left">
+                  <h6 style="
+                        color: #ffffff;
+                        text-align: left;
+                        padding-bottom: 0.25rem;
+                        font-weight: 600;
+                      ">
+                    Story Line
+                  </h6>
+                  <span style="
+                        color: #9ca4ab;
+                        text-align: left;
+                        font-size: small;
+                        padding-bottom: 0.25rem;
+                        font-weight: 400;
+                        margin-right: 1rem;
+                      ">Originally a story from Archie Comics which started in
+                    1941, Riverdale centres around a group of high school
+                    students who are shocked by the death of classmate, Jason
+                    Blossom. Together theyunravel the secrets of Riverdale and
+                    who
+                    <span style="color: #b43feb"> ... More</span>
+                  </span>
+                </div>
+              </div>
+              <!-- --------- comments text end --------- -->
+
+              <!-- --------- rate start --------- -->
+
+              <div class="col" style="flex-basis: 5%">
+                <h6 style="
+                      color: #ffffff;
+                      text-align: left;
+                      font-size: small;
+                      padding-bottom: 0.25rem;
+                    ">
+                  <i class="bi bi-star-fill" style="color: yellow"></i>
+                  <i class="bi bi-star-fill" style="color: yellow"></i>
+                  <i class="bi bi-star-fill" style="color: yellow"></i>
+                  <i class="bi bi-star-fill" style="color: yellow"></i>
+                  <i class="bi bi-star-fill" style="color: white"></i>
+                </h6>
+
+              </div>
+              <!-- --------- rate end --------- -->
+            </div>
+            <br />
+
+            <!-- ---------- Line start --------------- -->
+            <div class="col">
+              <div class="card" style="
+                    width: 50rem;
+                    background-color: rgb(255, 255, 255, 0.75);
+                    margin: 0 auto;
+                    height: 0.25px;
+                    margin-left: 1.25rem;
+                  "></div>
+            </div>
+            <!-- ---------- Line end --------------- -->
+          </div>
+          <!-- ======= comments end =========== -->
+          <br /><br />
+        </div>
+      </div>
+
+      <!-- ========== Reviews end ======== -->
+    </div>
+    <!-- ======= Movie detiles end =========== -->
+
+    <br /><br />
+
+    <!-- ========== Recommendatiion start ======== -->
+    <div class="card" style="width: 57rem; background-color: #0d0c0f; margin: 0 auto">
+      <div class="content-containar" style="text-align: left">
+        <h5 style="
+                    color: #ffffff;
+                    text-align: center;
+                    padding-bottom: 0.25rem;
+                    font-weight: 600;
+                  ">
+          Recommendatiion
+        </h5>
+      </div>
+
+      <section id="Coming-Soon">
+        <div class="container">
+          <div class="slider-wrapper">
+            <button id="prev-slide" class="slide-button material-symbols-rounded">
+              <i class="bi bi-arrow-left-circle-fill"></i>
+            </button>
+            <ul class="image-list">
+              <img class="image-item" src="../assets/images/img3.png" alt="img-1" />
+              <img class="image-item" src="../assets/images/img2.png" alt="img-2" />
+              <img class="image-item" src="../assets/images/img1.png" alt="img-3" />
+              <img class="image-item" src="../assets/images/img3.png" alt="img-4" />
+              <img class="image-item" src="../assets/images/img2.png" alt="img-5" />
+              <img class="image-item" src="../assets/images/img1.png" alt="img-6" />
+              <img class="image-item" src="../assets/images/img3.png" alt="img-7" />
+              <img class="image-item" src="../assets/images/img2.png" alt="img-8" />
+              <img class="image-item" src="../assets/images/img1.png" alt="img-9" />
+              <img class="image-item" src="../assets/images/img3.png" alt="img-10" />
+            </ul>
+            <button id="next-slide" class="slide-button material-symbols-rounded">
+              <i class="bi bi-arrow-right-circle-fill"></i>
+            </button>
+          </div>
+          <div class="slider-scrollbar">
+            <div class="scrollbar-track">
+              <div class="scrollbar-thumb"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  
+    <script>
+      function getQueryParams() {
+        const params = new URLSearchParams(window.location.search);
+        return params;
+      }
+  
+      const params = getQueryParams();
+      const animeId = params.get('animeId');
+    
+      if (animeId) {
+        fetchAnimeDetails(animeId);
+      } else {
+        console.error('Anime ID not found in the query parameters.');
+      }
+  
+      function fetchAnimeDetails(animeId) {
+        fetch(`https://api.jikan.moe/v4/anime/${animeId}`)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok " + response.statusText);
+            }
+            return response.json();
+          })
+          .then((data) => {
+            const anime = data.data;
+  
+            const detailsDiv = document.getElementById("imageDetiles");
+/**************************image************************/
+            const image = document.createElement("img");
+            image.src = anime.images.jpg.image_url;
+            image.alt = anime.title;
+            detailsDiv.insertBefore(image, detailsDiv.firstChild);
+            image.style.height = "20rem"; // Set height
+            image.style.width = "auto";
+/**************************\image************************/
+/**************************title************************/
+
+            const titleDetiles = document.getElementById("titleDetiles");
+
+                titleDetiles.innerHTML = anime.title;
+                
+
+/**************************\title************************/
+/****************************category******************************/
+             const category = document.getElementById("category");
+             for(let count=0; count<anime.genres.length; count++ ){
+              category.innerHTML +=  anime.genres[count].name + " ";
+              console.log(anime.genres[count].name);
+             }
+             
+                 
+            //      console.log(anime.genres.length);
+/*******************************\category*****************************/
+
+    <!-- ========== Recommendatiion end ======== -->
+
+    <!-- ================ footer ============= -->
+    <footer class="text-center text-white py-3 mt-auto" style="box-shadow: 1px 1px 1px #000000">
+      <div class="container">
+        <!-- Social media icons -->
+        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-facebook-f"></i></a>
+        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-twitter"></i></a>
+        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-google"></i></a>
+        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-instagram"></i></a>
+        <!-- Copyright notice -->
+        <div style="color: whitesmoke">© 2024 anime movie.com</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function getQueryParams() {
+      const params = new URLSearchParams(window.location.search);
+      return params;
+    }
+    const params = getQueryParams();
+    const animeId = params.get('animeId');
+    if (animeId) {
+      fetchAnimeDetails(animeId);
+    } else {
+      console.error('Anime ID not found in the query parameters.');
+    }
+
+    function fetchAnimeDetails(animeId) {
+      fetch(`https://api.jikan.moe/v4/anime/${animeId}`)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok " + response.statusText);
+          }
+          return response.json();
+        })
+        .then((data) => {
+          const anime = data.data;
+          console.log(anime)
+
+          const detailsDiv = document.getElementById("imageANDdetiles");
+          /**************************image************************/
+          const image = document.createElement("img");
+          image.src = anime.images.jpg.image_url;
+          image.alt = anime.title;
+          detailsDiv.insertBefore(image, detailsDiv.firstChild);
+          image.style.height = "max-content"; // Set height
+          image.style.width = "15rem";
+          /**************************\image************************/
+          /**************************title************************/
+
+          const titleDetiles = document.getElementById("titleDetiles");
+
+          titleDetiles.innerHTML = anime.title;
+
+
+          /**************************\title************************/
+          /****************************category******************************/
+          const category = document.getElementById("category");
+          for (let count = 0; count < anime.genres.length; count++) {
+            category.innerHTML += anime.genres[count].name + " ";
+          }
+          //      console.log(anime.genres.length);
+          /*******************************\category*****************************/
+
+          /****************************episodes******************************/
+          const episodes = document.getElementById("episodes-id");
+          episodes.innerHTML = `${anime.type}, `
+          if (anime.episodes !== null) {
+            episodes.innerHTML += `Episodes: ${anime.episodes}`
+
+          }
+          else {
+
+          }
+          /****************************\episodes******************************/
+
+
+
+          /****************************rating******************************/
+          const rating = document.getElementById("rating-id");
+          rating.innerHTML += `${anime.rating}`
+          /****************************\rating******************************/
+
+          /****************************score******************************/
+          const score = document.getElementById("score");
+          score.innerHTML += `${anime.score}`
+          /****************************\score******************************/
+
+          /****************************synopsis******************************/
+          const synopsis = document.getElementById("synopsis-id");
+          synopsis.innerHTML = `${anime.type}, `
+          if (anime.synopsis !== null) {
+            synopsis.innerHTML = `${anime.synopsis}`
+          }
+          /****************************\synopsis******************************/
+
+          // Add more details as needed
+
+        })
+        .catch((error) => {
+          console.error("There was a problem with the fetch operation:", error);
+        });
+    }
+    if (sessionStorage.getItem("userID", null) === null) {
+        let navbar = document.getElementById("navbar");
+        navbar.innerHTML = `<div class="navbar-container">
+            <div class="logo-container">
+              <h6 id="logo"> ANIMOVES</h6>
+             
+            </div>
+            <div class="menu-container">
+
+              
+              <a href="index.html"><li class="liNavbar active">Home</li></a>
+              <li class="liNavbar">Movies</li>
+              <li class="liNavbar">Series</li>
+            </div>
+    
+            <div class="profile-container">
+              <div style="margin: 15px;">
+                <span class="fas fa-search" > </span>
+              </div>
+              <div>
+              <button type="button" onclick="window.location.href='pages/login.html'" class="btn btn-light" style="background-color:#b43feb;color: #ffffff;border-color: #b43feb ;">Login</button>
+              </div>
+              
+            </div>
+           <i id="btnMenu" class="fa-solid fa-bars"></i>
+          </div>`;
+      }
+
+    </script>
+   
+    
+
+    <script src="../assets/scripts/sidebar.js"></script>
+    <script src="../assets/scripts/Coming Soon.js"></script>
+    <script type="module" src="../Reviews.js"></script>
+    
+  </body>
+</html>
+=======
+  </script>
+
+  <script src="../assets/scripts/sidebar.js"></script>
+  <script src="../assets/scripts/Coming Soon.js"></script>
+  <script src="../Reviews.js"></script>
+</body>
+
+</html>
+

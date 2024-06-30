@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Sidebar with Dark Mode Toggle Button</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/assets/styles/topratedpage.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="navbar">
+      <div class="navbar-container">
+        <div class="logo-container">
+          <h1 id="logo"></h1>
+          ANIMOVES
+        </div>
+        <div class="menu-container">
+          <ul class="ulNavbar"></ul>
+          <li class="liNavbar active"><a href="http://127.0.0.1:5501/index.html" style="text-decoration: none;">Home</a></li>
+          <li class="liNavbar"><a href="#" style="text-decoration: none;">Movies</a></li>
+          <li class="liNavbar">Series</li>
+        </div>
+        <!-- searchbar -->
+        <div class="searchbar">
+          <input  id="search-input" type="text" placeholder="Search ..." />
+          <button id="search-button">Search</button>
+        </div>
+<!-- ................... -->
+        <div class="profile-container">
+          <div class="search-icon">
+            <span class="fas fa-search"> </span>
+          </div>
+          <div>
+            <img id="user-picture" src="/assets/images/user.png" alt="" />
+            <i class="fas fa-caret-down"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- sidebar -->
+
+    <div>
+      <div class="sidebar" id="sidebar"></div>
+    </div>
+
+    <!-- containar -->
+    <!-- <div class="containar">
+        <div class="content-containar">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+          perspiciatis molestiae maxime tempora? Minus sequi sit dignissimos, quia
+          iusto, laboriosam eos aperiam, ullam voluptatem a voluptate nesciunt
+          voluptatibus ipsum illo!
+        </div>
+      </div> -->
+
+    <div class="top-rated">
+      <h2>Top Rated</h2>
+
+      <div class="movie-grid">
+        <section id="main-section">
+          <!-- <div class="movie-card">
+              <img
+                src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24748048.jpg"
+                alt="The Shawshank Redemption"
+              />
+              <div class="content">
+                <h3>The Shawshank Redemption</h3>
+                <div class="rating">&#9733; 9.2</div>
+                <div class="genre">Drama</div>
+              </div>
+            </div>
+            <div class="movie-card">
+              <img
+                src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24748048.jpg"
+                alt="The Godfather"
+              />
+              <div class="content">
+                <h3>The Godfather</h3>
+                <div class="rating">&#9733; 9.2</div>
+                <div class="genre">Crime • Drama</div>
+              </div>
+            </div>
+            <div class="movie-card" id="movie-card">
+              <img
+                id="movie-image"
+                src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24748048.jpg"
+                alt="The Dark Knight"
+              />
+              <div class="content">
+                <h3 id="movie-title">The Dark Knight</h3>
+                <div class="rating">&#9733; 9.0</div>
+                <div class="genre">Action • Crime</div>
+              </div>
+            </div> -->
+        </section>
+        <!-- </div>
+        <div class="movie-grid">
+          <div class="movie-cardb">
+            <img
+              src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24748048.jpg"
+              alt="Jumanji: The Next Level"
+            />
+            <div class="content">
+              <h3>Jumanji: The Next Level</h3>
+              <div class="rating">&#9733; 4.6</div>
+              <div class="genre">Action • Movie</div>
+            </div>
+          </div>
+        </div>
+        <div class="movie-grid">
+          <div class="movie-cardb">
+            <img
+              src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24748048.jpg"
+              alt="Jumanji: The Next Level"
+            />
+            <div class="content">
+              <h3>Jumanji: The Next Level</h3>
+              <div class="rating">&#9733; 4.6</div>
+              <div class="genre">Action • Movie</div>
+            </div>
+          </div>
+        </div>
+        <!-<div id="main-section"></div> -->
+      </div>
+    </div>
+    
+    <!-- <a "./Movie detiles.html">
+    <img src="${anime.imageUrl}" alt="${anime.title}">
+      <div>
+        <h2>${anime.title}</h2>
+      </a>
+        <p>Episodes: ${anime.episodes}</p>
+        <div class="rating">&#9733; 9.2</div>
+      </div> -->
+
+    <script src="../assets/scripts/topratedpage.js"></script>
+  </body>
+</html>
+

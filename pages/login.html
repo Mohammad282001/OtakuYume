@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMax Registration</title>
+    <link rel="stylesheet" href="../assets/styles/login.css">
+    <script type="module" src="../assets/scripts/logIn.js"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="offer-text">
+                <h1>Offers ad-free viewing of high quality</h1>
+                <p>Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet sit sem semper parturient.</p>
+            </div>
+            <div class="video-preview">
+                <img src="../assets/images/signUpImage.png" alt="Video Preview">
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="form-container">
+                <h2>LogIn</h2>
+                <form>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="signInEmail"  placeholder="Enter your Email">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="signInPassword"  placeholder="Enter your password">
+                    </div>
+                
+                    <button type="button" id="submitLogin" class="login-button">Login</button><br><br>
+                    <p class="login-text">Don't have an account? <a href="./signUp.html">Register</a></p>
+                </form>
+                <div id="loginMessage" class="messageDiv" style="display: none; background-color: green; color: white; "></div>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

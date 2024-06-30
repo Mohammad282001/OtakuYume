@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  background-color: #0d0c0f;
+}
+
+/* navbar */
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: #0d0c0f;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  box-shadow: 2px 2px 2px #1a161f;
+}
+
+.navbar-container {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 64px;
+  height: 100%;
+}
+
+.logo-container {
+  flex: 2;
+}
+
+.menu-container {
+  flex: 8;
+  display: flex;
+  list-style: none;
+  justify-content: flex-start;
+}
+
+.liNavbar {
+  margin-right: 30px;
+}
+
+.liNavbar.active {
+  font-weight: bold;
+  color: #b43feb;
+}
+
+.profile-container {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: -40px;
+}
+
+#user-picture {
+  width: 20px;
+  height: 20px;
+  border-radius: 20%;
+  object-fit: contain;
+}
+
+.profile-container .fas {
+  width: 50px;
+  height: 100%;
+}
+
+/* sidebar */
+.sidebar {
+  background-color: #1a161f;
+  color: white;
+  width: 275px;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a.menu {
+  pointer-events: none;
+  color: #9ca4ab;
+  font-weight: 700;
+  margin-top: 50px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.sidebar a:hover {
+  background-color: hsla(0, 0%, 100%, 0.4);
+}
+
+.sidebar a .iconSidebar {
+  margin-right: 8px;
+}
+
+.dark-mode-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #b43feb;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle .toggle-button {
+  width: 16px;
+  height: 16px;
+  left: 5px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle.on .toggle-button {
+  transform: translateX(16px);
+}
+
+/* Add specific style for the "Discovery" icon */
+.sidebar a .fa-cc-discover {
+  color: #ffffff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.sidebar a .far {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.sidebar a .fas {
+  color: #ffffff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+#dark-mode-link {
+  margin-top: 45px;
+}
+
+/* content */
+/* .content {
+  margin-left: 40px;
+} */
+
+/* containar */
+.containar {
+  background-color: #0d0c0f;
+  color: #ffffff;
+  padding: 5px;
+  margin-left: 275px;
+  margin-top: 50px;
+}
+
+/* .top-rated,
+.best-of-action {
+  margin-bottom: 40px;
+} */
+.movie-grid {
+  /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-left: 350px;
+  margin-top: 100px;
+}
+.movie-card {
+  background-color: #3333332c;
+  color: white;
+  border-radius: 10px;
+  gap: 35px;
+  border-radius: 25px;
+  display: flex;
+  /* width: 33%; */
+}
+.movie-card img {
+  /* width: 100%;
+    height: auto; */
+  height: 250px;
+  border-radius: 25px;
+}
+.movie-card .content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.movie-card .content h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #fff;
+}
+.movie-card .content .rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffd700;
+}
+.movie-card .content .genre {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+/* .top-rated .movie-card {
+  display: flex;
+} */
+
+.movie-best {
+  display: flex;
+}
+
+/* card2 */
+
+.movie-cardb {
+  background-color: #3333332c;
+  border-radius: 10px;
+  /* overflow: hidden; */
+  text-align: center;
+  gap: 15px;
+  border-radius: 25px;
+}
+
+.movie-cardb img {
+  /* width: 100%;
+      height: auto; */
+  height: 250px;
+  border-radius: 25px;
+}
+.movie-cardb .content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.movie-cardb .content h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.movie-cardb .content .rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffd700;
+}
+
+.movie-cardb .content .genre {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  gap: 12px;
+}
+.rating {
+  color: yellow;
+}
+
+.movie-card:last-child img{
+  /* background-color: #b43feb; */
+  width: 250px;
+}
+/* @media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .containar,
+  .movie-grid {
+    margin-left: 0;
+  }
+
+  .movie-card,
+  .movie-cardb {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-container {
+    margin-right: 0;
+  }
+
+  .movie-card,
+  .movie-cardb {
+    flex: 1 1 100%;
+  }
+
+  .movie-card img,
+  .movie-cardb img {
+    height: auto;
+  }
+} */
+
+/* the searchbar  */
+
+.search-icon {
+  cursor: pointer;
+  font-size: 18px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  /* padding: 0 64px; */
+  height: 100%;
+  /* padding-top: 15px; */
+  padding-bottom: 6px;
+}
+
+.searchbar {
+  display: none;
+  align-items: center;
+  background-color: #1c1c1e;
+  border-radius: 25px;
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.searchbar input[type="text"] {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 10px;
+  color: #b0b0b0;
+  font-size: 16px;
+  width: 200px;
+}
+
+.searchbar button {
+  background-color: #8f00ff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.searchbar button:hover {
+  background-color: #7200cc;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}

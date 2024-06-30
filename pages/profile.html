@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>profile settings</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+ <!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<link rel="stylesheet" href="../assets/styles/profile.css">
+<link rel="stylesheet" href="../assets/styles/sidebar-nav.css">
+
+
+</head>
+<body>
+
+<div class="container-fluid">
+  <!---------------------header---------------------->
+     <!-- navbar -->
+     <div class="navbar">
+      <div class="navbar-container">
+        <div class="logo-container">
+          <h6 id="logo"> ANIMOVES</h6>
+         
+        </div>
+        <div class="menu-container">
+          
+          <a href="../index.html"><li class="liNavbar active">Home</li></a>
+          <li class="liNavbar">Movies</li>
+          <li class="liNavbar">Series</li>
+        </div>
+
+        <div class="profile-container">
+          <div>
+            <span class="fas fa-search"> </span>
+            <span class="fas fa-bell"></span>
+          </div>
+          <div>
+            <img id="user-picture" src="../assets/images/username.png" alt="" />
+            <i class="fas fa-caret-down"></i>
+          </div>
+          
+        </div>
+       <i id="btnMenu" class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <!-- sidebar -->
+   
+ <div class="sidebar" id="sidebar"></div>
+    <!-- containar -->
+       
+    <div class="content-containar">
+       
+    
+<!---------------------end header---------------------->
+    <div class="row">
+    
+        <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4" >
+
+         <!------------------------body----------------------------->
+         <div class="container text-center profile-col">
+          <div class="row">
+            <div class="col-12 col-md-4  mt-5 full-height left-col">profile settings
+              <p class="Personal-Info">Personal Info</p>
+
+              <div class="menu-profile">
+               <div class="divEdit">
+                <li class="liprofile"><i class="fa-solid fa-user profile-icon"></i> Edit Profile
+                <a href="" class="link"><i class="fa-solid fa-chevron-right"></i></a>
+                </li>
+              </div>
+              <div class="divPass">
+                <li class="liprofile liDown"><i class="fa-solid fa-key Password-icon"></i> Password
+                <a href="" class="link linkDown"><i class="fa-solid fa-chevron-right"></i></a>
+                </li>
+              </div>
+              </div> 
+              <a href="#" class="logoutBut" >
+                <i class="fa-solid fa-right-from-bracket"></i> Log out
+              </a>
+            </div>
+            <div class="col-12 col-md-8 mt-5 full-height right-col">
+
+              <form action="">
+
+                <div class="profile-picture">
+                  <img src="../assets/images/adminIcon.jpg" alt="User Picture">
+                  <i class="fas fa-camera"></i>
+                </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" placeholder="Ahmad">
+                </div>
+                
+                <div class="form-group">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" placeholder="Saris">
+                </div>
+              </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" placeholder="ahmadsaris@gmail.com">
+                </div>
+                
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" placeholder="+1 03203202">
+                </div>
+                
+                <div class="form-actions">
+                  <button class="btn-edit">Edit Details</button>
+                </div>
+            
+            </form>
+            </div>
+          </div>
+        
+        </div>
+        <!----------------------------body------------------------------->
+        <!-----------------------------footer----------------------->
+
+        <footer class="text-center bg-body-tertiary">
+          <!-- Grid container -->
+          <div class="container pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+              <!-- Facebook -->
+              <a
+                data-mdb-ripple-init
+                class="btn btn-link btn-floating btn-lg text-body m-1"
+                href="#!"
+                role="button"
+                data-mdb-ripple-color="dark"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+        
+              <!-- Twitter -->
+              <a 
+                data-mdb-ripple-init
+                class="btn btn-link btn-floating btn-lg text-body m-1"
+                href="#!"
+                role="button"
+                data-mdb-ripple-color="dark"
+                ><i class="fab fa-twitter"></i
+              ></a>
+        
+              <!-- Google -->
+              <a
+                data-mdb-ripple-init
+                class="btn btn-link btn-floating btn-lg text-body m-1"
+                href="#!"
+                role="button"
+                data-mdb-ripple-color="dark"
+                ><i class="fab fa-google"></i
+              ></a>
+        
+              <!-- Instagram -->
+              <a
+                data-mdb-ripple-init
+                class="btn btn-link btn-floating btn-lg text-body m-1"
+                href="#!"
+                role="button"
+                data-mdb-ripple-color="dark"
+                ><i class="fab fa-instagram"></i
+              ></a>
+        
+              
+           
+            </section>
+            <!-- Section: Social media -->
+          </div>
+          <!-- Grid container -->
+        
+          <!-- Copyright -->
+          <div class="text-center p-3" style="color: whitesmoke;">
+            © 2024 Copyright:
+            <a style="color: rgb(98, 98, 98);" >anime movie.com</a>
+          </div>
+          <!-- Copyright -->
+        </footer>
+            <!-------------------------------->        
+
+      </main>
+    </div>  
+     
+   </div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="../assets/scripts/sidebar.js"></script>
+<script src="../assets/scripts/home.js"></script>
+
+
+</body>
+</html>
