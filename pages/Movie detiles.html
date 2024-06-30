@@ -60,30 +60,37 @@
                 margin: 0 auto;
                 margin-top: 3rem;
               " id="imageDetiles">
+
       <div id="imageANDdetiles" style="display: flex;">
+
         <div class="card-body d-flex justify-content-center align-items-center">
-          <div class="container text-center">
+
+          <div class="container text-center" style="height: -webkit-fill-available;">
+            <!----------------title------------------->
+            <p style="
+              color: #ffffff;
+              text-align: left;
+              padding-bottom: 0.25rem;
+              align-self: flex-start;
+              font-size: 3rem;
+
+            " id="titleDetiles">
+          </p>
+          <p id="year-id" style="color: #ffffff; text-align: start;
+;
+"></p>
+            <!----------------/title------------------->
             <div class="row">
               <div class="col">
-                <!----------------title------------------->
-                <h4 style="
-                            color: #ffffff;
-                            text-align: left;
-                            padding-bottom: 0.25rem;
-                          " id="titleDetiles">
-                </h4>
-                <!----------------/title------------------->
-
                 <h6 style="
                             color: #ffffff;
                             text-align: left;
                             font-size: small;
                             padding-bottom: 0.25rem;
-                          " id="category" ;><!------------------category------------------>
+                          " id="category" ;>
+            <!------------------category------------------>
                   <i class="bi bi-film"></i> <!--Action • Crime -->
                   <!-------------------category----------------->
-                </h6>
-
                 <h6 style="
                             color: #ffffff;
                             text-align: left;
@@ -104,7 +111,8 @@
 
               <!-- ======= Like Shear button start =========== -->
               <div class="col">
-                <p id="rating-id" style="color: #ffffff;"></p>
+                
+                <p id="rating-id" style="color: #ffffff; ;margin-right: 1rem;text-align: end"></p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 
                   <button class="btn" style="
@@ -136,12 +144,12 @@
 
 
       <!-- ======= story line start =========== -->
-      <div class="card" style="width: 56.5rem; background-color: #0d0c0f; margin: 0 auto">
+      <div class="card" style="background-color: #0d0c0f; margin: 0 auto">
         <div class="content-containar" style="text-align: left">
           <h6 style="
                 color: #ffffff;
                 text-align: left;
-                padding-bottom: 0.25rem;
+                margin-top: 5rem;
                 font-weight: 600;
               ">
             Story Line
@@ -159,8 +167,16 @@
         <br />
       </div>
       <!-- ======= story line end =========== -->
+      <!-- youtube trailer -->
+      <div id="trailer-container" >
+        <iframe id="trailer-id" width="420" height="345" src="">
+        </iframe>
+        
+      </div>
+      <!-- /youtube trailer -->
 
       <br /><br />
+
 
       <!-- ---------- Line start --------------- -->
       <div class="card" style="
@@ -172,6 +188,8 @@
             margin-bottom : 1rem;
             
           "></div>
+
+          
       <!-- ---------- Line end --------------- -->
 
 
@@ -242,16 +260,6 @@
                     X
                   </button>
                 </div>
-
-                <!-- --------- user img end --------- -->
-
-                <!-- --------- comments text start --------- ------------------------------------------------------->
-                <div class="col" style="flex-basis: 60%">
-                  <div id="content-containar" id="MoComment" class="content-containar" style="text-align: left">
-                    <!-- <h6
-                      id="userText"
-                      style="
-
                 <br />
                 <textarea id="comment" placeholder="Write your comments.." required></textarea><br />
                 <button type="submit" class="btn">Submit Review</button>
@@ -272,7 +280,6 @@
               <div class="col" style="flex-basis: 60%">
                 <div id="content-containar" class="content-containar" style="text-align: left">
                   <h6 id="userText" style="
-
                         color: #ffffff;
                         text-align: left;
                         padding-bottom: 0.25rem;
@@ -287,21 +294,6 @@
                         padding-bottom: 0.25rem;
                         font-weight: 400;
                         margin-right: 1rem;
-
-                      "
-                      >Originally a story from Archie Comics which started in
-                      1941, Riverdale centres around a group of high school
-                      students who are shocked by the death of classmate, Jason
-                      Blossom. Together theyunravel the secrets of Riverdale and
-                      who
-                      <span style="color: #b43feb"> ... More</span>
-                    </span> -->
-                  </div>
-                </div>
-                <!-- --------- comments text end ------------------------------------------------------------------ -->
-
-              
-
                       ">Originally a story from Archie Comics which started in
                     1941, Riverdale centres around a group of high school
                     students who are shocked by the death of classmate, Jason
@@ -469,7 +461,6 @@
                   <i class="bi bi-star-fill" style="color: yellow"></i>
                   <i class="bi bi-star-fill" style="color: white"></i>
                 </h6>
-
               </div>
               <!-- --------- rate end --------- -->
             </div>
@@ -541,62 +532,6 @@
         </div>
       </section>
     </div>
-
-  
-    <script>
-      function getQueryParams() {
-        const params = new URLSearchParams(window.location.search);
-        return params;
-      }
-  
-      const params = getQueryParams();
-      const animeId = params.get('animeId');
-    
-      if (animeId) {
-        fetchAnimeDetails(animeId);
-      } else {
-        console.error('Anime ID not found in the query parameters.');
-      }
-  
-      function fetchAnimeDetails(animeId) {
-        fetch(`https://api.jikan.moe/v4/anime/${animeId}`)
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Network response was not ok " + response.statusText);
-            }
-            return response.json();
-          })
-          .then((data) => {
-            const anime = data.data;
-  
-            const detailsDiv = document.getElementById("imageDetiles");
-/**************************image************************/
-            const image = document.createElement("img");
-            image.src = anime.images.jpg.image_url;
-            image.alt = anime.title;
-            detailsDiv.insertBefore(image, detailsDiv.firstChild);
-            image.style.height = "20rem"; // Set height
-            image.style.width = "auto";
-/**************************\image************************/
-/**************************title************************/
-
-            const titleDetiles = document.getElementById("titleDetiles");
-
-                titleDetiles.innerHTML = anime.title;
-                
-
-/**************************\title************************/
-/****************************category******************************/
-             const category = document.getElementById("category");
-             for(let count=0; count<anime.genres.length; count++ ){
-              category.innerHTML +=  anime.genres[count].name + " ";
-              console.log(anime.genres[count].name);
-             }
-             
-                 
-            //      console.log(anime.genres.length);
-/*******************************\category*****************************/
-
     <!-- ========== Recommendatiion end ======== -->
 
     <!-- ================ footer ============= -->
@@ -655,31 +590,39 @@
 
 
           /**************************\title************************/
+
+          /****************************year******************************/
+
+          const year = document.getElementById("year-id");
+          if (anime.year !== null)
+          year.innerHTML += `(${anime.year})`
+          /*******************************\year*****************************/
+        
           /****************************category******************************/
           const category = document.getElementById("category");
           for (let count = 0; count < anime.genres.length; count++) {
-            category.innerHTML += anime.genres[count].name + " ";
+            category.innerHTML += anime.genres[count].name + "•";
           }
           //      console.log(anime.genres.length);
           /*******************************\category*****************************/
 
           /****************************episodes******************************/
           const episodes = document.getElementById("episodes-id");
-          episodes.innerHTML = `${anime.type}, `
-          if (anime.episodes !== null) {
-            episodes.innerHTML += `Episodes: ${anime.episodes}`
-
-          }
-          else {
-
-          }
+          if(anime.type.toLowerCase() == "Movie".toLowerCase())
+          episodes.innerHTML = `${anime.type} ‧ ${anime.duration} `
+          if (anime.type.toLowerCase() == "tv".toLowerCase())
+            if (anime.episodes !== null) {
+              episodes.innerHTML = `Episodes: ${anime.episodes} ‧ ${anime.duration}`
+            }
           /****************************\episodes******************************/
 
 
 
           /****************************rating******************************/
           const rating = document.getElementById("rating-id");
+          if (anime.rating !== null)
           rating.innerHTML += `${anime.rating}`
+        
           /****************************\rating******************************/
 
           /****************************score******************************/
@@ -687,13 +630,30 @@
           score.innerHTML += `${anime.score}`
           /****************************\score******************************/
 
-          /****************************synopsis******************************/
+          /****************************story******************************/
           const synopsis = document.getElementById("synopsis-id");
           synopsis.innerHTML = `${anime.type}, `
           if (anime.synopsis !== null) {
             synopsis.innerHTML = `${anime.synopsis}`
           }
-          /****************************\synopsis******************************/
+          /****************************\story******************************/
+
+
+          /****************************trailer******************************/
+          const loadAnimeTrailer = async (animeId) => {
+            const trailerEmbedUrl = anime.trailer.embed_url;
+            if (trailerEmbedUrl) {
+              document.getElementById('trailer-id').src = trailerEmbedUrl;
+              console.log("we find a url "+ trailerEmbedUrl )
+            } else {
+              console.log("we didnot" + trailerEmbedUrl)
+              document.getElementById('trailer-container').innerHTML = '<p style="color=while;">Trailer not available</p>';
+            }
+          };
+          loadAnimeTrailer(anime.mal_id);
+
+          /****************************\trailer******************************/
+
 
           // Add more details as needed
 
@@ -703,14 +663,12 @@
         });
     }
     if (sessionStorage.getItem("userID", null) === null) {
-        let navbar = document.getElementById("navbar");
-        navbar.innerHTML = `<div class="navbar-container">
+      let navbar = document.getElementById("navbar");
+      navbar.innerHTML = `<div class="navbar-container">
             <div class="logo-container">
               <h6 id="logo"> ANIMOVES</h6>
-             
             </div>
             <div class="menu-container">
-
               
               <a href="index.html"><li class="liNavbar active">Home</li></a>
               <li class="liNavbar">Movies</li>
@@ -728,25 +686,50 @@
             </div>
            <i id="btnMenu" class="fa-solid fa-bars"></i>
           </div>`;
-      }
-
-    </script>
-   
-    
-
-    <script src="../assets/scripts/sidebar.js"></script>
-    <script src="../assets/scripts/Coming Soon.js"></script>
-    <script type="module" src="../Reviews.js"></script>
-    
-  </body>
-</html>
-=======
+    }
   </script>
 
   <script src="../assets/scripts/sidebar.js"></script>
   <script src="../assets/scripts/Coming Soon.js"></script>
   <script src="../Reviews.js"></script>
+  <!-- Code injected by live-server -->
+  <script>
+    // <![CDATA[  <-- For SVG support
+    if ('WebSocket' in window) {
+      (function () {
+        function refreshCSS() {
+          var sheets = [].slice.call(document.getElementsByTagName("link"));
+          var head = document.getElementsByTagName("head")[0];
+          for (var i = 0; i < sheets.length; ++i) {
+            var elem = sheets[i];
+            var parent = elem.parentElement || head;
+            parent.removeChild(elem);
+            var rel = elem.rel;
+            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+            }
+            parent.appendChild(elem);
+          }
+        }
+        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+        var address = protocol + window.location.host + window.location.pathname + '/ws';
+        var socket = new WebSocket(address);
+        socket.onmessage = function (msg) {
+          if (msg.data == 'reload') window.location.reload();
+          else if (msg.data == 'refreshcss') refreshCSS();
+        };
+        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+          console.log('Live reload enabled.');
+          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+        }
+      })();
+    }
+    else {
+      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+    }
+    // ]]>
+  </script>
 </body>
 
 </html>
-
