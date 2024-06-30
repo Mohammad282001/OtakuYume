@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+}
+
+.full-height {
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.profile-row {
+    margin-top: 40px;
+}
+
+.profile-row .col-md-6 {
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.profile-row .col-md-6 img {
+    max-width: 100%;
+    height: auto;
+}
+
+.profile-row h2 {
+    font-size: 2rem;
+}
+
+.profile-row p {
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 1023px) {
+    .profile-row {
+        margin-left: 5%;
+    }
+
+    .full-height {
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .profile-row .col-md-6 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .profile-row p {
+        margin-top: 20px;
+    }
+}
+
+/* Footer should stick to the bottom */
+footer {
+    margin-top: auto;
+    width: 100%;
+}

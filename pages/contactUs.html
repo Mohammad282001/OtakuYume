@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+ <!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<link rel="stylesheet" href="../assets/styles/contactUs.css">
+<link rel="stylesheet" href="../assets/styles/sidebar-nav.css">
+    <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDilZ4OoUQVNemEfgW3s7VivjrDEWey-Ps",
+      authDomain: "creative-tutorial-3e3fe.firebaseapp.com",
+      databaseURL: "https://creative-tutorial-3e3fe-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "creative-tutorial-3e3fe",
+      storageBucket: "creative-tutorial-3e3fe.appspot.com",
+      messagingSenderId: "372442580127",
+      appId: "1:372442580127:web:ce3087c0f71fdb2f59ceaa"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("contactBtn").addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const usernameinput = document.getElementById("full-name").value;
+        const emailinput = document.getElementById("email").value;
+        const messageinput = document.getElementById("message").value;
+
+        set(ref(db, "data/" + usernameinput), {
+          username: usernameinput,
+          email: emailinput,
+          message: messageinput,
+          // createdAt: serverTimestamp(),
+        })
+        .then(() => {
+          alert("Data Storage Success");
+        })
+        .catch((error) => {
+          alert("Error: " + error);
+        });
+
+        document.getElementById("postForm").reset();
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!---------------------header---------------------->
+           <!-- navbar -->
+           <div class="navbar">
+            <div class="navbar-container">
+              <div class="logo-container">
+                <h6 id="logo"> ANIMOVES</h6>
+               
+              </div>
+              <div class="menu-container">
+                
+                <a href="../index.html"><li class="liNavbar active">Home</li></a>
+                <li class="liNavbar">Movies</li>
+                <li class="liNavbar">Series</li>
+              </div>
+      
+              <div class="profile-container">
+                <div>
+                  <span class="fas fa-search"> </span>
+                  <span class="fas fa-bell"></span>
+                </div>
+                <div>
+                  <img id="user-picture" src="../assets/images/username.png" alt="" />
+                  <i class="fas fa-caret-down"></i>
+                </div>
+                
+              </div>
+             <i id="btnMenu" class="fa-solid fa-bars"></i>
+            </div>
+          </div>
+      
+          <!-- sidebar -->
+         
+       <div class="sidebar" id="sidebar"></div>
+          <!-- containar -->
+             
+          <div class="content-containar">
+             
+          
+      <!---------------------end header---------------------->
+          <div class="row">
+          
+              <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4" >
+      
+               <!------------------------body----------------------------->
+               <div class="container text-center profile-col">
+                <div class="row">
+                  <div class="col-12 col-md-4  mt-5 full-height left-col">Contact us
+                    <p class="Personal-Info">Contact Info</p>
+      
+                    <div class="menu-profile">
+                     <div class="divEdit">
+                      <li class="liprofile"><i class="fa-solid fa-user profile-icon"></i> yousefborinii@gmail.com
+                      <!-- <a href="" class="link"><i class="fa-solid fa-chevron-right"></i></a> -->
+                      </li>
+                    </div>
+                    <div class="divPass">
+                      <li class="liprofile liDown"><i class="fa-solid fa-key Password-icon"></i> 07XXXXXXXX
+                      <!-- <a href="" class="link linkDown"><i class="fa-solid fa-chevron-right"></i></a> -->
+                      </li>
+                    </div>
+                    </div> 
+                    
+                  </div>
+                  <div class="col-12 col-md-8 mt-5 full-height right-col">
+      
+                    <form action="">
+      
+                      <div class="profile-picture">
+                        <img src="../assets/images/adminIcon.jpg" alt="User Picture">
+                        <i class="fas fa-camera"></i>
+                      </div>
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label for="first-name">Full Name</label>
+                        <input type="text" id="full-name" placeholder="Ahmad" style="width: 688px;">
+                      </div>
+                      
+                      
+                    </div>
+                      <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="ahmadsaris@gmail.com">
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="phone">Message</label>
+                        <input type="text" id="message" placeholder="Your Message">
+                      </div>
+                      
+                      <div class="form-actions">
+                        <button class="btn-edit" type="submit" id="contactBtn">Contact</button>
+                      </div>
+                  
+                  </form>
+                  </div>
+                </div>
+              
+              </div>
+              <!----------------------------body------------------------------->
+              <!-----------------------------footer----------------------->
+      
+              <footer class="text-center bg-body-tertiary">
+                <!-- Grid container -->
+                <div class="container pt-4">
+                  <!-- Section: Social media -->
+                  <section class="mb-4">
+                    <!-- Facebook -->
+                    <a
+                      data-mdb-ripple-init
+                      class="btn btn-link btn-floating btn-lg text-body m-1"
+                      href="#!"
+                      role="button"
+                      data-mdb-ripple-color="dark"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+              
+                    <!-- Twitter -->
+                    <a 
+                      data-mdb-ripple-init
+                      class="btn btn-link btn-floating btn-lg text-body m-1"
+                      href="#!"
+                      role="button"
+                      data-mdb-ripple-color="dark"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+              
+                    <!-- Google -->
+                    <a
+                      data-mdb-ripple-init
+                      class="btn btn-link btn-floating btn-lg text-body m-1"
+                      href="#!"
+                      role="button"
+                      data-mdb-ripple-color="dark"
+                      ><i class="fab fa-google"></i
+                    ></a>
+              
+                    <!-- Instagram -->
+                    <a
+                      data-mdb-ripple-init
+                      class="btn btn-link btn-floating btn-lg text-body m-1"
+                      href="#!"
+                      role="button"
+                      data-mdb-ripple-color="dark"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+              
+                    
+                 
+                  </section>
+                  <!-- Section: Social media -->
+                </div>
+                <!-- Grid container -->
+              
+                <!-- Copyright -->
+                <div class="text-center p-3" style="color: whitesmoke;">
+                  © 2024 Copyright:
+                  <a style="color: rgb(98, 98, 98);" >anime movie.com</a>
+                </div>
+                <!-- Copyright -->
+              </footer>
+                  <!-------------------------------->        
+      
+            </main>
+          </div>  
+           
+         </div>
+      
+      </div>
+      
+      
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      
+      <script src="../assets/scripts/sidebar.js"></script>
+      <script src="../assets/scripts/home.js"></script>
+      
+      
+</body>
+</html>
