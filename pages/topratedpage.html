@@ -11,40 +11,35 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/assets/styles/topratedpage.css" />
-    <link rel="stylesheet" href="../assets/styles/sidebar-nav.css">
+    <link rel="stylesheet" href="../assets/styles/sidebar-nav.css" />
   </head>
   <body>
-    <!-- navbar -->
+    <!-- Navbar -->
     <div class="navbar">
       <div class="navbar-container">
         <div class="logo-container">
           <h1 id="logo"></h1>
-          ANIMOVES
           <!-- <h1 class="maintitle">Top Rated</h1> -->
         </div>
         <div class="menu-container">
-          <ul class="ulNavbar"></ul>
-          <li class="liNavbar active">
-            <a
-              href="http://127.0.0.1:5501/index.html"
-              style="text-decoration: none"
-              >Home</a
-            >
-          </li>
-          <li class="liNavbar">
-            <a href="#" style="text-decoration: none">Movies</a>
-          </li>
-          <li class="liNavbar">Series</li>
+          <ul class="ulNavbar">
+            <li class="liNavbar active">
+              <a href="http://127.0.0.1:5501/index.html" style="text-decoration: none">Home</a>
+            </li>
+            <li class="liNavbar">
+              <a href="#" style="text-decoration: none">Movies</a>
+            </li>
+            <li class="liNavbar">Series</li>
+          </ul>
         </div>
-        <!-- searchbar -->
+        <!-- Searchbar -->
         <div class="searchbar">
           <input id="search-input" type="text" placeholder="Search ..." />
           <button id="search-button">Search</button>
         </div>
-        <!-- ................... -->
         <div class="profile-container">
           <div class="search-icon">
-            <span class="fas fa-search"> </span>
+            <span class="fas fa-search"></span>
           </div>
           <div>
             <img id="user-picture" src="/assets/images/user.png" alt="" />
@@ -54,22 +49,14 @@
       </div>
     </div>
 
-    <!-- sidebar -->
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar"></div>
 
-    <div>
-      <div class="sidebar" id="sidebar"></div>
-    </div>
-
-    <!-- containar -->
-
-
+    <!-- Main Container -->
     <div class="top-rated">
       <!-- <h2>Top Rated</h2> -->
-
       <div class="movie-grid">
-        <section id="main-section">
-        </section>
-  
+        <section id="main-section"></section>
         <div class="pages" id="pages">
           <p></p>
           <button>1</button>
@@ -80,7 +67,6 @@
         </div>
       </div>
     </div>
-
 
     <script src="../assets/scripts/sidebar.js"></script>
     <script src="../assets/scripts/topratedpage.js"></script>
