@@ -169,8 +169,8 @@
       <!-- ======= story line end =========== -->
       <!-- youtube trailer -->
       <div id="trailer-container" style="display:flex; justify-content: center; margin: 3rem;
-  flex-direction: column;
-  align-items: center;">
+        flex-direction: column;
+        align-items: center;">
         <p style="color: #ffffff; font-weight: 600; font-size:2rem;text-shadow: 1px 1px #B43FEB;">Trailer</p>
         <iframe id="trailer-id" width="420" height="345" src="">
         </iframe>
@@ -178,7 +178,14 @@
       </div>
       <!-- /youtube trailer -->
 
-      <br /><br />
+
+
+      <!-- where to watch -->
+      <div id="streaming-id">
+        <p style="color: red;">hi</p>
+      </div>
+
+      <!-- /where to watch -->
 
 
       <!-- ---------- Line start --------------- -->
@@ -647,6 +654,44 @@
           loadAnimeTrailer(anime.mal_id);
 
           /****************************\trailer******************************/
+
+          // where to watch//
+
+          let streamingDiv = document.getElementById("streaming-id");
+
+          fetch(`https://api.jikan.moe/v4/anime/${animeId}/streaming`)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok " + response.statusText);
+            }
+            return response.json();
+          })
+          .then((data) => {
+            if (Array.isArray(data.data)) {
+              data.data.slice(0, 10).forEach((information) => {
+                console.log(information.name)
+                if(information.name.toLowerCase() == "Crunchyroll".toLowerCase())
+                {
+                  let link = document.createElement("a");
+                  link.href = `${information.url}`
+                  link.style.color="red";
+                  link.innerHTML = "link"
+                  streamingDiv.appendChild(link);
+                }
+                if(information.name.toLowerCase() == "netflix".toLowerCase())
+                  return;
+              });
+            } else {
+              console.error("Data is not an array:", data);
+            }
+          })
+          .catch((error) => {
+            console.error("There was a problem with the fetch operation:", error);
+          });
+
+          // where to watch//
+
+
 
 
           // Add more details as needed
