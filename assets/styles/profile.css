@@ -73,6 +73,13 @@ body{
     padding: 0 9%;
   }
   /*****************form**********************/
+.form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
   .btn-edit {
     background-color: #B43FEB;
     color: #fff;
@@ -104,12 +111,15 @@ body{
     font-size: 13px;
   }
   .form-group {
+    margin-top: 1%;
     margin-bottom: 20px;
     font-size: 0.8rem;
+    text-align: center !important;
   }
   .profile-picture {
+    margin-top: 15%;
     display: flex;
-    margin-bottom: 10%;
+    margin-bottom: 2%;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -138,9 +148,10 @@ body{
     display: flex;
     justify-content: space-between;
   }
+
   .form-row .form-group {
-    width: 48%;
-  }
+    width: 100%;
+  } 
 
   /*******************responsive *******************/
 
