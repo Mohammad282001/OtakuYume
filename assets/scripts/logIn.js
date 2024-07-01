@@ -34,8 +34,7 @@ function showMessage(message, divId) {
 
 // Sign In Functionality
 const signIn = document.getElementById("submitLogin");
-signIn.addEventListener("click", (event) => {
-    event.preventDefault();
+signIn.addEventListener("click", async (event) => {
     const email = document.getElementById("signInEmail").value;
     const password = document.getElementById("signInPassword").value;
     const auth = getAuth();
@@ -48,48 +47,42 @@ signIn.addEventListener("click", (event) => {
         showMessage("Please fill out both fields", "loginMessage");
         return;
     }
-    signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            console.log("Sign in successful:", userCredential.user);  // Debugging step
+    try {
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        console.log("Sign in successful:", userCredential.user);  // Debugging step
 
-            showMessage("Login is successful", "loginMessage");
-            const user = userCredential.user;
-            
-            sessionStorage.setItem("userID", user.uid);
-            // getUserName(user.uid);
-            window.location.href = "../index.html"; // Change this to the correct redirection page
-        })
-        .catch((error) => {
-            console.error("Error signing in: ", error);
-            const errorCode = error.code;
-            if (errorCode === "auth/wrong-password") {
-                showMessage("Incorrect Password", "loginMessage");
-            } else if (errorCode === "auth/user-not-found") {
-                showMessage("Account does not exist", "loginMessage");
-            } else {
-                showMessage("Unable to sign in: " + error.message, "loginMessage");
-            }
-        });
+        showMessage("Login is successful", "loginMessage");
+        const user = userCredential.user;
+        
+        sessionStorage.setItem("userID", user.uid);
+        await getUserName(user.uid);
+        window.location.href = "../index.html"; // Change this to the correct redirection page
+    } catch (error) {
+        console.error("Error signing in: ", error);
+        const errorCode = error.code;
+        if (errorCode === "auth/wrong-password") {
+            showMessage("Incorrect Password", "loginMessage");
+        } else if (errorCode === "auth/user-not-found") {
+            showMessage("Account does not exist", "loginMessage");
+        } else {
+            showMessage("Unable to sign in: " + error.message, "loginMessage");
+        }
+    }
 });
-// async function getUserName(userId) {
-//     const userDocRef = doc(db, "users", userId);
 
-//     getDoc(userDocRef).then(async (docSnap) => {
-//         if (docSnap.exists()) {
-//             const userData =await docSnap.data();
-//             const userName=await userData.name;
-//             console.log(docSnap.data())
-//             sessionStorage.setItem("fuckingName" ,userName);
-//         } else {
-//             console.log("No such document!");
-//         }
-//     }).catch((error) => {
-//         console.log("Error getting document:", error);
-//     });
-// }
-
-
-// userDashboard.html
-
-
-// Function to check if the referrer is from the same origin
+async function getUserName(userId) {
+    try {
+        const userDocRef = doc(db, "users", userId);
+        const docSnap = await getDoc(userDocRef);
+        if (docSnap.exists()) {
+            const userData = docSnap.data();
+            const userName = userData.name;
+            console.log("User data:", userData);
+            sessionStorage.setItem("userName", userName);
+        } else {
+            console.log("No such document!");
+        }
+    } catch (error) {
+        console.log("Error getting document:", error);
+    }
+}
