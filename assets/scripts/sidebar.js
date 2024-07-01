@@ -28,8 +28,9 @@ const linksSidebar = [
   { nameSidebar: "Setting", url: "/pages/profile.html", iconSidebar: "fas fa-cog" },
   {
     nameSidebar: "Log out",
-    url: "/pages/login.html",
+    url: "/index.html",
     iconSidebar: "fas fa-sign-out-alt",
+    id: "logouttest"
   },
 ];
 
@@ -66,3 +67,17 @@ linksSidebar.forEach((link) => {
 });
 
 sidebar.appendChild(ulSidebar);
+
+
+const logoutButton = document.getElementById("logouttest");
+
+logoutButton.addEventListener("click", () => {
+  sessionStorage.removeItem("userID");
+  signOut(auth)
+    .then(() => {
+      window.location.href = "../index.html";
+    })
+    .catch((error) => {
+      console.error("Error signing out:", error);
+    });
+});
