@@ -68,9 +68,14 @@ function renderAnime(animeList) {
     const card = document.createElement("div");
     card.setAttribute("class", "movie-card");
     card.innerHTML = `
-      <img src="${anime.imageUrl}" alt="${anime.title}">
+
+    
+            <a href = "Movie detiles.html?animeId=${anime.id}&uu=99">
+        <img src="${anime.imageUrl}" alt="${anime.title}">
       <div>
         <h2>${anime.title}</h2>
+      </a>
+      
         <p>Episodes: ${anime.episodes}</p>
         <div class="rating">&#9733; ${anime.score} </div>
       </div>
