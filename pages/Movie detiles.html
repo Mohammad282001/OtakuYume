@@ -12,6 +12,26 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles/MovieDetiles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+  
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+     .animated-image {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .animated-image:hover {
+    transform: scale(1.1);
+  }
+  </style>
 </head>
 
 <body>
@@ -76,10 +96,12 @@
               font-size: 3rem;
 
             " id="titleDetiles">
+            <p id="rating-id" style="color: #ffffff;"></p>
             </p>
             <p id="year-id" style="color: #ffffff; text-align: start;
 ;
 "></p>
+
             <!----------------/title------------------->
             <div class="row">
               <div class="col">
@@ -89,6 +111,7 @@
                             font-size: small;
                             padding-bottom: 0.25rem;
                           " id="category" ;>
+                          
                   <!------------------category------------------>
                   <i class="bi bi-film"></i> <!--Action • Crime -->
                   <!-------------------category----------------->
@@ -99,12 +122,12 @@
                             padding-bottom: 0.25rem;
                           ">
                     <!-- episodes -->
-                    <p id="episodes-id">Episodes
-                    <p id="score">
+                    <p id="episodes-id">Episodes</p>
+                    <p id="score"> 
 
 
                       <!------------------------------------------------->
-                      <i class="bi bi-star-fill" style="color: yellow"></i>
+                      <i class="bi bi-star-fill" style="color: yellow"></i></p>
                       <!----------------------------------------------->
                   </h6>
 
@@ -113,8 +136,7 @@
               <!-- ======= Like Shear button start =========== -->
               <div class="col">
 
-                <p id="rating-id" style="color: #ffffff; ;margin-right: 1rem;text-align: end"></p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 
                   <button class="btn" style="
                               background-color: #b43feb;
@@ -134,7 +156,7 @@
                             " type="button">
                     <i class="bi bi-share"></i> Share
                   </button>
-                </div>
+                </div> -->
               </div>
               <!-- ======= Like Shear button end =========== -->
             </div>
@@ -182,8 +204,10 @@
 
 
       <!-- where to watch -->
-      <div id="streaming-id">
-        <p style="color: red;">hi</p>
+      <div id="streaming-id" style="display: flex; flex-direction: column; align-items: center;">
+        <p id="watchPar" style="color: #ffffff; font-weight: 600; font-size: 2rem; text-shadow: 1px 1px #B43FEB;"></p>
+        <div id="straming-links" style="display: flex;
+          gap: 5rem;"></div>
       </div>
 
       <!-- /where to watch -->
@@ -220,334 +244,355 @@
           </h5>
         </div>
       </div>
-
-      <div
-      class="card-body d-flex justify-content-center align-items-center"
-      style="margin-top: -45px"
-    >
+      <div class="card-body d-flex justify-content-center align-items-center" style="margin-top: -45px">
         <div class="container ">
           <div class="row">
- <div
-              class="container "
-              style="width: 93%; margin-top: 40px"
-           >
-            <!-- ======= write review button start =========== -->
-            
-
-                 
-                   <!---------------------------------------------------------------------------------->
-    <section style="background-color: #000000;">
-      <div class="container my-5 py-5">
-        <div class="row d-flex ">
-      <!-----------------------comment-------------------------------->
-            <div class="card" id="MoComment">
-
-             
+            <div class="container " style="width: 93%; margin-top: 40px">
+              <!-- ======= write review button start =========== -->
 
 
-              
-            </div>
-      <!------------------------------------------------------->      
-            <div class="card-footer py-3 border-0" style="background-color: #1A161F; color: #ffffff;" id="hideComment">
-                <div class="d-flex flex-start w-100">
-                 
-                  <div data-mdb-input-init class="form-outline w-100">
-                    <textarea class="form-control" id="textAreaExample" rows="4"
-                      style="background: rgb(255, 255, 255); opacity: 1;"></textarea>
-                    <label class="form-label" for="textAreaExample">Message</label>
+
+              <!---------------------------------------------------------------------------------->
+              <section style="background-color: #000000;">
+                <div class="container my-5 py-5">
+                  <div class="row d-flex ">
+                    <!-----------------------comment-------------------------------->
+                    <div class="card" id="MoComment">
+
+
+
+
+
+                    </div>
+                    <!------------------------------------------------------->
+                    <div class="card-footer py-3 border-0" style="background-color: #1A161F; color: #ffffff;"
+                      id="hideComment">
+                      <div class="d-flex flex-start w-100">
+
+                        <div data-mdb-input-init class="form-outline w-100">
+                          <textarea class="form-control" id="textAreaExample" rows="4"
+                            style="background: rgb(255, 255, 255); opacity: 1;"></textarea>
+                          <label class="form-label" for="textAreaExample">Message</label>
+                        </div>
+                      </div>
+
+
+                      <div class="float-end mt-2 pt-1" style="display: flex; gap: 10px;">
+                        <form id="formSubmit">
+                          <button type="submit" data-mdb-button-init data-mdb-ripple-init
+                            class="btn btn-secondary btn-sm">Post comment</button>
+                        </form>
+                        <form id="formCancel">
+
+                          <button type="submit" data-mdb-button-init data-mdb-ripple-init
+                            class="btn btn-outline-secondary btn-sm">Cancel</button>
+
+                        </form>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
-        
-               
-                <div class="float-end mt-2 pt-1" style="display: flex; gap: 10px;">
-                  <form id="formSubmit">
-                  <button type="submit"  data-mdb-button-init data-mdb-ripple-init class="btn btn-secondary btn-sm" >Post comment</button>
-                  </form>
-                  <form id="formCancel">
-                  
-                    <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-secondary btn-sm"  >Cancel</button>
-                
-                  </form>
-                </div>
-              </div>
-           
-          </div>
-        </div>
-      </div>
-    </section>
-<!---------------------------------------------------------------------------------->
-          <!-- ======= comments end =========== -->
-          <!-- <br /><br />
+            </div>
+            </section>
+            <!---------------------------------------------------------------------------------->
+            <!-- ======= comments end =========== -->
+            <!-- <br /><br />
         </div>
       </div> -->
 
-      <!-- ========== Reviews end ======== -->
-    <!-- </div> -->
-    <!-- ======= Movie detiles end =========== -->
+            <!-- ========== Reviews end ======== -->
+            <!-- </div> -->
+            <!-- ======= Movie detiles end =========== -->
 
-    <br /><br />
+            <br /><br />
 
-    <!-- ========== Recommendatiion start ======== -->
-    <div class="card" style="width: 57rem; background-color: #0d0c0f; margin: 0 auto">
-      <div class="content-containar" style="text-align: left">
-        <h5 style="
+            <!-- ========== Recommendatiion start ======== -->
+            <div class="card" style="width: 57rem; background-color: #0d0c0f; margin: 0 auto">
+              <div class="content-containar" style="text-align: left">
+                <h5 style="
                     color: #ffffff;
                     text-align: center;
                     padding-bottom: 0.25rem;
                     font-weight: 600;
                   ">
-          Recommendatiion
-        </h5>
-      </div>
+                  Recommendatiion
+                </h5>
+              </div>
 
-      <section id="Coming-Soon">
-        <div class="container">
-          <div class="slider-wrapper">
-            <button id="prev-slide" class="slide-button material-symbols-rounded">
-              <i class="bi bi-arrow-left-circle-fill"></i>
-            </button>
-            <ul class="image-list" id="image-list" style="height: fit-content;">
-            </ul>
-            <button id="next-slide" class="slide-button material-symbols-rounded">
-              <i class="bi bi-arrow-right-circle-fill"></i>
-            </button>
-          </div>
-          <div class="slider-scrollbar">
-            <div class="scrollbar-track">
-              <div class="scrollbar-thumb"></div>
+              <section id="Coming-Soon">
+                <div class="container">
+                  <div class="slider-wrapper">
+                    <button id="prev-slide" class="slide-button material-symbols-rounded">
+                      <i class="bi bi-arrow-left-circle-fill"></i>
+                    </button>
+                    <ul class="image-list" id="image-list" style="height: fit-content;">
+                    </ul>
+                    <button id="next-slide" class="slide-button material-symbols-rounded">
+                      <i class="bi bi-arrow-right-circle-fill"></i>
+                    </button>
+                  </div>
+                  <div class="slider-scrollbar">
+                    <div class="scrollbar-track">
+                      <div class="scrollbar-thumb"></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
+
+            <!-- ========== Recommendatiion end ======== -->
+
+            <!-- ================ footer ============= -->
+            <footer class="text-center text-white py-3 mt-auto" style="box-shadow: 1px 1px 1px #000000">
+              <div class="container">
+                <!-- Social media icons -->
+                <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i
+                    class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-google"></i></a>
+                <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i
+                    class="fab fa-instagram"></i></a>
+                <!-- Copyright notice -->
+                <div style="color: whitesmoke">© 2024 anime movie.com</div>
+              </div>
+            </footer>
           </div>
-        </div>
-      </section>
-    </div>
 
-    <!-- ========== Recommendatiion end ======== -->
-
-    <!-- ================ footer ============= -->
-    <footer class="text-center text-white py-3 mt-auto" style="box-shadow: 1px 1px 1px #000000">
-      <div class="container">
-        <!-- Social media icons -->
-        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-facebook-f"></i></a>
-        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-twitter"></i></a>
-        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-google"></i></a>
-        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-instagram"></i></a>
-        <!-- Copyright notice -->
-        <div style="color: whitesmoke">© 2024 anime movie.com</div>
-      </div>
-    </footer>
-  </div>
-
-  <script>
-    function getQueryParams() {
-      const params = new URLSearchParams(window.location.search);
-      return params;
-    }
-    const params = getQueryParams();
-    const animeId = params.get('animeId');
-
-    const hideComment = document.getElementById("hideComment");
-    if( !sessionStorage.getItem('userID')){
-    hideComment.style.display = "none";
-}
-    if (animeId) {
-      fetchAnimeDetails(animeId);
-    } else {
-      console.error('Anime ID not found in the query parameters.');
-    }
-
-    function fetchAnimeDetails(animeId) {
-      fetch(`https://api.jikan.moe/v4/anime/${animeId}`)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Network response was not ok " + response.statusText);
-          }
-          return response.json();
-        })
-        .then((data) => {
-          const anime = data.data;
-          console.log(anime)
-
-          const detailsDiv = document.getElementById("imageANDdetiles");
-          /**************************image************************/
-          const image = document.createElement("img");
-          image.src = anime.images.jpg.image_url;
-          image.alt = anime.title;
-          detailsDiv.insertBefore(image, detailsDiv.firstChild);
-          image.style.height = "max-content"; // Set height
-          image.style.width = "15rem";
-          /**************************\image************************/
-          /**************************title************************/
-
-          const titleDetiles = document.getElementById("titleDetiles");
-
-          titleDetiles.innerHTML = anime.title;
-
-
-          /**************************\title************************/
-
-          /****************************year******************************/
-
-          const year = document.getElementById("year-id");
-          if (anime.year !== null)
-            year.innerHTML += `(${anime.year})`
-          /*******************************\year*****************************/
-
-          /****************************category******************************/
-          const category = document.getElementById("category");
-          for (let count = 0; count < anime.genres.length; count++) {
-            category.innerHTML += anime.genres[count].name + "•";
-          }
-          //      console.log(anime.genres.length);
-          /*******************************\category*****************************/
-
-          /****************************episodes******************************/
-          const episodes = document.getElementById("episodes-id");
-          if (anime.type.toLowerCase() == "Movie".toLowerCase())
-            episodes.innerHTML = `${anime.type} ‧ ${anime.duration} `
-          if (anime.type.toLowerCase() == "tv".toLowerCase())
-            if (anime.episodes !== null) {
-              episodes.innerHTML = `Episodes: ${anime.episodes} ‧ ${anime.duration}`
+          <script>
+            function getQueryParams() {
+              const params = new URLSearchParams(window.location.search);
+              return params;
             }
-          /****************************\episodes******************************/
+            const params = getQueryParams();
+            const animeId = params.get('animeId');
 
-
-
-          /****************************rating******************************/
-          const rating = document.getElementById("rating-id");
-          if (anime.rating !== null)
-            rating.innerHTML += `${anime.rating}`
-
-          /****************************\rating******************************/
-
-          /****************************score******************************/
-          const score = document.getElementById("score");
-          score.innerHTML += `${anime.score}`
-          /****************************\score******************************/
-
-          /****************************story******************************/
-          const synopsis = document.getElementById("synopsis-id");
-          synopsis.innerHTML = `${anime.type}, `
-          if (anime.synopsis !== null) {
-            synopsis.innerHTML = `${anime.synopsis}`
-          }
-          /****************************\story******************************/
-
-
-          /****************************trailer******************************/
-          const loadAnimeTrailer = async (animeId) => {
-            const trailerEmbedUrl = anime.trailer.embed_url;
-            if (trailerEmbedUrl) {
-              document.getElementById('trailer-id').src = trailerEmbedUrl;
-              console.log("we find a url " + trailerEmbedUrl)
+            const hideComment = document.getElementById("hideComment");
+            if (!sessionStorage.getItem('userID')) {
+              hideComment.style.display = "none";
+            }
+            if (animeId) {
+              fetchAnimeDetails(animeId);
             } else {
-              console.log("we didnot" + trailerEmbedUrl)
-              document.getElementById('trailer-container').innerHTML = '<p style="color: #ffffff; font-weight: 400; font-size:1.5rem;text-decoration: underline;">Trailer Not Available</p>';
+              console.error('Anime ID not found in the query parameters.');
             }
-          };
-          loadAnimeTrailer(anime.mal_id);
 
-          /****************************\trailer******************************/
+            function fetchAnimeDetails(animeId) {
+              fetch(`https://api.jikan.moe/v4/anime/${animeId}`)
+                .then((response) => {
+                  if (!response.ok) {
+                    throw new Error("Network response was not ok " + response.statusText);
+                  }
+                  return response.json();
+                })
+                .then((data) => {
+                  const anime = data.data;
+                  console.log(anime)
 
-          // where to watch//
+                  const detailsDiv = document.getElementById("imageANDdetiles");
+                  /**************************image************************/
+                  const image = document.createElement("img");
+                  image.src = anime.images.jpg.image_url;
+                  image.alt = anime.title;
+                  detailsDiv.insertBefore(image, detailsDiv.firstChild);
+                  image.style.height = "max-content"; // Set height
+                  image.style.width = "15rem";
+                  /**************************\image************************/
+                  /**************************title************************/
 
-          let streamingDiv = document.getElementById("streaming-id");
+                  const titleDetiles = document.getElementById("titleDetiles");
 
-          fetch(`https://api.jikan.moe/v4/anime/${animeId}/streaming`)
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Network response was not ok " + response.statusText);
-            }
-            return response.json();
-          })
-          .then((data) => {
-            if (Array.isArray(data.data)) {
-              data.data.slice(0, 10).forEach((information) => {
-                console.log(information.name)
-                if(information.name.toLowerCase() == "Crunchyroll".toLowerCase())
-                {
-                  let link = document.createElement("a");
-                  link.href = `${information.url}`
-                  link.style.color="red";
-                  link.innerHTML = "link"
-                  streamingDiv.appendChild(link);
-                }
-                if(information.name.toLowerCase() == "netflix".toLowerCase())
-                  return;
-              });
-            } else {
-              console.error("Data is not an array:", data);
-            }
-          })
-          .catch((error) => {
-            console.error("There was a problem with the fetch operation:", error);
-          });
-
-          // where to watch//
+                  titleDetiles.innerHTML = anime.title;
 
 
+                  /**************************\title************************/
+
+                  /****************************year******************************/
+
+                  const year = document.getElementById("year-id");
+                  if (anime.year !== null)
+                    year.innerHTML += `(${anime.year})`
+                  /*******************************\year*****************************/
+
+                  /****************************category******************************/
+                  const category = document.getElementById("category");
+                  for (let count = 0; count < anime.genres.length; count++) {
+                    category.innerHTML += anime.genres[count].name + "•";
+                  }
+                  //      console.log(anime.genres.length);
+                  /*******************************\category*****************************/
+
+                  /****************************episodes******************************/
+                  const episodes = document.getElementById("episodes-id");
+                  if (anime.type.toLowerCase() == "Movie".toLowerCase())
+                    episodes.innerHTML = `${anime.type} ‧ ${anime.duration} `
+                  if (anime.type.toLowerCase() == "tv".toLowerCase())
+                    if (anime.episodes !== null) {
+                      episodes.innerHTML = `Episodes: ${anime.episodes} ‧ ${anime.duration}`
+                    }
+                  /****************************\episodes******************************/
 
 
-          // Add more details as needed
+
+                  /****************************rating******************************/
+                  const rating = document.getElementById("rating-id");
+                  if (anime.rating !== null)
+                    rating.innerHTML += `${anime.rating}`
+
+                  /****************************\rating******************************/
+
+                  /****************************score******************************/
+                  const score = document.getElementById("score");
+                  score.innerHTML += `${anime.score}`
+                  /****************************\score******************************/
+
+                  /****************************story******************************/
+                  const synopsis = document.getElementById("synopsis-id");
+                  synopsis.innerHTML = `${anime.type}, `
+                  if (anime.synopsis !== null) {
+                    synopsis.innerHTML = `${anime.synopsis}`
+                  }
+                  /****************************\story******************************/
 
 
-          function createCard2(id, imageUrl) {
+                  /****************************trailer******************************/
+                  const loadAnimeTrailer = async (animeId) => {
+                    const trailerEmbedUrl = anime.trailer.embed_url;
+                    if (trailerEmbedUrl) {
+                      document.getElementById('trailer-id').src = trailerEmbedUrl;
+                      console.log("we find a url " + trailerEmbedUrl)
+                    } else {
+                      console.log("we didnot" + trailerEmbedUrl)
+                      document.getElementById('trailer-container').innerHTML = '<p style="color: #ffffff; font-weight: 400; font-size:1.5rem;text-decoration: underline;">Trailer Not Available</p>';
+                    }
+                  };
+                  loadAnimeTrailer(anime.mal_id);
 
-            const mainDiv2 = document.getElementById("image-list");
-            const linkComing = document.createElement("a");
-            linkComing.href = `Movie detiles.html?animeId=${id}`;
-            linkComing.onclick = () => {
-              sessionStorage.setItem("animeId", id);
-            };
-            mainDiv2.appendChild(linkComing);
-            const imageComing = document.createElement("img");
-            imageComing.setAttribute("alt", "image");
-            imageComing.src = imageUrl;
-            linkComing.appendChild(imageComing);
-            imageComing.style.borderRadius="10%";
+                  /****************************\trailer******************************/
 
-          }
+                  // where to watch//
+
+                  let streamingDiv = document.getElementById("straming-links");
+                  let paraghraph = document.getElementById("watchPar");
+
+                  fetch(`https://api.jikan.moe/v4/anime/${animeId}/streaming`)
+                    .then((response) => {
+                      if (!response.ok) {
+                        throw new Error("Network response was not ok " + response.statusText);
+                      }
+                      return response.json();
+                    })
+                    .then((data) => {
+                      if (Array.isArray(data.data)) {
+                        data.data.slice(0, 10).forEach((information) => {
+                          console.log(information.name);
+
+                          if (information.name.toLowerCase() === "crunchyroll") {
+                          paraghraph.innerHTML = "Where to Watch?"
+
+                            let link = document.createElement("a");
+                            let image = document.createElement("img");
+
+                            image.src = "/assets/images/crunchyroll-logo.jpg";
+                            link.href = information.url;
+                            image.style.width = "20rem";
+                            image.classList.add("animated-image");
+
+                            streamingDiv.appendChild(link);
+                            link.appendChild(image);
+                          }
+
+                          if (information.name.toLowerCase() === "netflix") {
+                                              paraghraph.innerHTML = "Where to Watch?"
+
+                            let link2 = document.createElement("a");
+                            let image2 = document.createElement("img");
+
+                            image2.src = "/assets/images/netflix-logo.jpg";
+                            image2.style.width = "20rem";
+                            link2.href = information.url;
+                            image2.classList.add("animated-image");
+
+                            streamingDiv.appendChild(link2);
+                            link2.appendChild(image2);
+                          }
 
 
-          fetch(`https://api.jikan.moe/v4/anime/${animeId}/recommendations`)
-            .then((response) => {
-              if (!response.ok) {
-                throw new Error("Network response was not ok " + response.statusText);
-              }
-              return response.json();
-            })
-            .then((data) => {
-              if (Array.isArray(data.data)) {
-                data.data.slice(0, 10).forEach((information) => {
-                  createCard2(
-                    information.entry.mal_id,
-                    information.entry.images.jpg.image_url
-                  );
+                          
+                        });
+                      } else {
+                        console.error("Data is not an array:", data);
+                      }
+                    })
+                    .catch((error) => {
+                      console.error("There was a problem with the fetch operation:", error);
+                    });
+                  // where to watch//
+
+
+
+
+                  // Add more details as needed
+
+
+                  function createCard2(id, imageUrl) {
+
+                    const mainDiv2 = document.getElementById("image-list");
+                    const linkComing = document.createElement("a");
+                    linkComing.href = `Movie detiles.html?animeId=${id}`;
+                    linkComing.onclick = () => {
+                      sessionStorage.setItem("animeId", id);
+                    };
+                    mainDiv2.appendChild(linkComing);
+                    const imageComing = document.createElement("img");
+                    imageComing.setAttribute("alt", "image");
+                    imageComing.src = imageUrl;
+                    linkComing.appendChild(imageComing);
+                    imageComing.style.borderRadius = "10%";
+
+                  }
+
+
+                  fetch(`https://api.jikan.moe/v4/anime/${animeId}/recommendations`)
+                    .then((response) => {
+                      if (!response.ok) {
+                        throw new Error("Network response was not ok " + response.statusText);
+                      }
+                      return response.json();
+                    })
+                    .then((data) => {
+                      if (Array.isArray(data.data)) {
+                        data.data.slice(0, 10).forEach((information) => {
+                          createCard2(
+                            information.entry.mal_id,
+                            information.entry.images.jpg.image_url
+                          );
+                        });
+                      } else {
+                        console.error("Data is not an array:", data);
+                      }
+                    })
+                    .catch((error) => {
+                      console.error("There was a problem with the fetch operation:", error);
+                    });
+
+
+
+
+
+
+
+
+
+
+                })
+                .catch((error) => {
+                  console.error("There was a problem with the fetch operation:", error);
                 });
-              } else {
-                console.error("Data is not an array:", data);
-              }
-            })
-            .catch((error) => {
-              console.error("There was a problem with the fetch operation:", error);
-            });
-
-
-
-
-
-
-
-
-
-
-        })
-        .catch((error) => {
-          console.error("There was a problem with the fetch operation:", error);
-        });
-    }
-    if (sessionStorage.getItem("userID", null) === null) {
-      let navbar = document.getElementById("navbar");
-      navbar.innerHTML = `<div class="navbar-container">
+            }
+            if (sessionStorage.getItem("userID", null) === null) {
+              let navbar = document.getElementById("navbar");
+              navbar.innerHTML = `<div class="navbar-container">
             <div class="logo-container">
               <h6 id="logo"> ANIMOVES</h6>
             </div>
@@ -569,50 +614,50 @@
             </div>
            <i id="btnMenu" class="fa-solid fa-bars"></i>
           </div>`;
-    }
-  </script>
-
-  <script src="../assets/scripts/sidebar.js"></script>
-  <script src="../assets/scripts/Coming Soon.js"></script>
-  <script src="../Reviews.js" type="module"></script>
-  <!-- Code injected by live-server -->
-  <script>  
-    // <![CDATA[  <-- For SVG support
-    if ('WebSocket' in window) {
-      (function () {
-        function refreshCSS() {
-          var sheets = [].slice.call(document.getElementsByTagName("link"));
-          var head = document.getElementsByTagName("head")[0];
-          for (var i = 0; i < sheets.length; ++i) {
-            var elem = sheets[i];
-            var parent = elem.parentElement || head;
-            parent.removeChild(elem);
-            var rel = elem.rel;
-            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
             }
-            parent.appendChild(elem);
-          }
-        }
-        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-        var address = protocol + window.location.host + window.location.pathname + '/ws';
-        var socket = new WebSocket(address);
-        socket.onmessage = function (msg) {
-          if (msg.data == 'reload') window.location.reload();
-          else if (msg.data == 'refreshcss') refreshCSS();
-        };
-        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-          console.log('Live reload enabled.');
-          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-        }
-      })();
-    }
-    else {
-      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-    }
-    // ]]>
-  </script>
+          </script>
+
+          <script src="../assets/scripts/sidebar.js"></script>
+          <script src="../assets/scripts/Coming Soon.js"></script>
+          <script src="../Reviews.js" type="module"></script>
+          <!-- Code injected by live-server -->
+          <script>
+            // <![CDATA[  <-- For SVG support
+            if ('WebSocket' in window) {
+              (function () {
+                function refreshCSS() {
+                  var sheets = [].slice.call(document.getElementsByTagName("link"));
+                  var head = document.getElementsByTagName("head")[0];
+                  for (var i = 0; i < sheets.length; ++i) {
+                    var elem = sheets[i];
+                    var parent = elem.parentElement || head;
+                    parent.removeChild(elem);
+                    var rel = elem.rel;
+                    if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                      var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                      elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                    }
+                    parent.appendChild(elem);
+                  }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                  if (msg.data == 'reload') window.location.reload();
+                  else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                  console.log('Live reload enabled.');
+                  sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+              })();
+            }
+            else {
+              console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+            }
+            // ]]>
+          </script>
 </body>
 
 </html>
