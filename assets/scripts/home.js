@@ -1,3 +1,25 @@
+/***************************hearo ********************************* */
+{/* <section id="hero-section">
+
+ <h5 class="WelcomeMess">Welcome back Mr/Ms . Name</h5>  */}
+
+ const heroName = document.getElementById("hero-section");
+ const h5Name = document.createElement("h5");
+ h5Name.setAttribute("class","WelcomeMess") ;
+ 
+
+let userName = sessionStorage.getItem('userName');
+
+if(userName){
+
+  h5Name.innerHTML= `Welcome , ${userName}! Enjoy exploring the latest movies.`;
+
+}else{
+  h5Name.innerHTML= `Welcome! Enjoy exploring the latest movies.`;
+}
+
+heroName.insertBefore(h5Name, heroName.firstChild);
+
 /*****************************Coming Soon********************* */
 const initSlider = () => {
   const imageList = document.querySelector(".slider-wrapper .image-list");
@@ -233,7 +255,7 @@ fetch(`https://api.jikan.moe/v4/anime`)
   .then((data) => {
     
     if (Array.isArray(data.data)) {
-      data.data.slice(0, 25).forEach((information) => {
+      data.data.slice(10,35).forEach((information) => {
         createCard2(
           information.mal_id,
           information.images.jpg.image_url
