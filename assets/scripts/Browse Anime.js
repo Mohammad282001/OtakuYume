@@ -8,11 +8,23 @@ function Anime(id, title, synopsis, episodes, imageUrl, score) {
   this.score = score;
 }
 
+// pagenation
+const pages = document.getElementById("pages");
+
+pages.addEventListener("click", (event) => {
+  const pageNumber = event.target.innerHTML; // 1, 2, 3
+
+  //
+  console.log(pageNumber);
+  fetchAnimeAndRender("", "", pageNumber);
+});
 // Function to fetch anime based on selected type and age rating
-async function fetchAnimeAndRender(antype, ageRating) {
+async function fetchAnimeAndRender(antype, ageRating, page) {
   try {
     const response = await fetch(
-      `https://api.jikan.moe/v4/anime?type=${antype}&rating=${ageRating}`
+      `https://api.jikan.moe/v4/anime?type=${antype}&rating=${ageRating}&page=${
+        page || 1
+      }`
     );
     if (!response.ok) {
       throw new Error("Network response was not ok.");

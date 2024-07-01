@@ -143,7 +143,7 @@ section {
 img{
   width: 200px;
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .sidebar {
     display: none;
   }
@@ -182,8 +182,9 @@ img{
   .movie-card img,
   .movie-cardb img {
     height: auto;
+    /* width: auto; */
   }
-} */
+}
 
 /* the searchbar  */
 
