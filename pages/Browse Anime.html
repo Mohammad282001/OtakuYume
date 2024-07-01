@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Anime</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/assets/styles/topratedpage.css" />
+
+ <style>
+
+   .form-select {
+            padding: 0.8rem 1rem;
+            margin: 0.5rem;
+            width: 300px;
+            background-color: #000;
+            color: #B43FEB;
+            border: 2px solid #B43FEB;
+            border-radius: 8px;
+            font-size: 1rem;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="%23B43FEB" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+            background-repeat: no-repeat;
+            background-position-x: 95%;
+            background-position-y: center;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-select:focus {
+            outline: none;
+            box-shadow: 0 0 10px #B43FEB;
+        }
+
+        .form-select option {
+            background-color: #000;
+            color: #B43FEB;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .form-select option:hover {
+            background-color: #B43FEB;
+            color: #cc3535;
+           t
+        }
+    </style>
+
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="navbar">
+      <div class="navbar-container">
+        <div class="logo-container">
+          <h1 id="logo"></h1>
+          ANIMOVES
+        </div>
+        <div class="menu-container">
+          <ul class="ulNavbar"></ul>
+          <li class="liNavbar active"><a href="http://127.0.0.1:5501/index.html" style="text-decoration: none;">Home</a></li>
+          <li class="liNavbar"><a href="#" style="text-decoration: none;">Movies</a></li>
+          <li class="liNavbar">Series</li>
+        </div>
+        <!-- searchbar -->
+        <div class="searchbar">
+          <input  id="search-input" type="text" placeholder="Search ..." />
+          <button id="search-button">Search</button>
+        </div>
+<!-- ................... -->
+        <div class="profile-container">
+          <div class="search-icon">
+            <span class="fas fa-search"> </span>
+          </div>
+          <div>
+            <img id="user-picture" src="/assets/images/user.png" alt="" />
+            <i class="fas fa-caret-down"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- sidebar -->
+    <div>
+      <div class="sidebar" id="sidebar"></div>
+    </div>
+
+    <!-- containar -->
+    
+     <div class="Browse Anime">
+                    <h2> Browse Anime </h2>
+        <div style="display: flex; justify-content: center; align-items: center; margin-top :5rem ;">
+      <select id="anitype" class="form-select" aria-label="Default select example">
+        <option value="tv">TV</option>
+        <option value="movie">Movie</option>
+        <option value="ova">OVA</option>
+        <option value="special">Special</option>
+    </select>
+
+    <select id="ageRating" class="form-select" aria-label="Default select example">
+        <option value="g">G - All Ages</option>
+        <option value="pg">PG - Children</option>
+        <option value="pg13">PG-13 - Teens 13 or older</option>
+        <option value="r17">R - 17+ (violence & profanity)</option>
+    </select>
+        </div>
+      <div class="movie-grid">
+          <section id="main-section"></section>
+      </div>
+      </div>
+    
+
+    
+
+
+    <script src="../assets/scripts/sidebar.js"></script>
+        <script src="../assets/scripts/Browse Anime.js"></script>
+
+  </body>
+</html>
+
