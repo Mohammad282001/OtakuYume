@@ -162,22 +162,14 @@ function createCard(id, imageUrl, title, synopsis) {
     if (sessionStorage.getItem("userID" , null) === null){
 
       let navbar = document.getElementById("navbar");
-      navbar.innerHTML= `<a class="navbar-brand bg-light" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+      navbar.innerHTML= `<a href="index.html"> <img src="./assets/images/logo.png"  alt=""  style="width: 3rem; height: 3rem;"></a>
+                         <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: center;">
+                         </div>
+                         <button type="button" id="search-button" class="btn" onclick="window.location.href='pages/login.html'" style= "background-color:#B43FEB ; color: white ; border-radius: 24px; border-color: #B43FEB; margin-left : 10px">Login</button>
+                          `;
+                          }
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: center;">
-
-        <form class="form-inline my-2 my-lg-0">
-            <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button id="search-button" class="btn" type="submit">Search</button>
-        </form>
-    </div>
-                <button type="button" id="search-button" class="btn" onclick="window.location.href='pages/login.html'" style= "background-color:#B43FEB ; color: white ; border-radius: 24px; border-color: #B43FEB; margin-left : 10px">Login</button>
-
-              </div>`;
-  }
+                          
 
 fetch(`https://api.jikan.moe/v4/anime`)
   .then((response) => {
