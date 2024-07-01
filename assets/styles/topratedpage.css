@@ -193,14 +193,14 @@ body {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
-  margin-left: 350px;
-  margin-top: 100px;
+  margin-left: 285px;
+  margin-top: 80px;
 }
 .movie-card {
-  background-color: #3333332c;
+  background-color: #33333344;
   color: white;
   border-radius: 10px;
-  gap: 35px;
+  gap: 17px;
   border-radius: 25px;
   display: flex;
   /* width: 33%; */
@@ -291,8 +291,12 @@ section {
   color: yellow;
 }
 
-.movie-card:last-child img{
-  /* background-color: #b43feb; */
+/* .movie-card:last-child img{
+  
+  width: 250px;
+} */
+
+img{
   width: 250px;
 }
 /* @media screen and (max-width: 768px) {
@@ -387,4 +391,40 @@ section {
 a{
   text-decoration: none;
   color: white;
+}
+
+.pages{
+  width: 100%;
+  text-align: center;
+  
+  
+}
+button{
+  background-color: #7200cc;
+  border-radius: 20%;
+}
+
+button {
+  background-color: #7200cc; /* Primary background color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  padding: 15px 30px; /* Space inside the button */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Inline-block element */
+  font-size: 16px; /* Text size */
+  font-weight: bold; /* Bold text */
+  border-radius: 12px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h2{
+  font-size: 18px;
 }

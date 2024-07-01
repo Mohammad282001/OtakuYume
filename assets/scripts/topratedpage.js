@@ -86,10 +86,11 @@ function Anime(id, title, synopsis, episodes, imageUrl, score) {
   this.score = score;
 }
 
-async function fetchAnimeAndRender(search) {
+async function fetchAnimeAndRender(search, page) {
   try {
-
-    const response = await fetch(`https://api.jikan.moe/v4/anime?q=${search}`);
+    const response = await fetch(
+      `https://api.jikan.moe/v4/anime?q=${search}&page=${page || 1}`
+    );
     if (!response.ok) {
       throw new Error("Network response was not ok.");
     }
@@ -148,9 +149,14 @@ function renderAnime(animeList) {
 // Call fetchAnimeAndRender with a default search query when the page loads
 window.onload = function () {
   fetchAnimeAndRender(""); // Default search query example ('naruto')
+// pagenation
+  const pages = document.getElementById("pages");
   
+  pages.addEventListener("click", (event) => {
+    const pageNumber = event.target.innerHTML;
+    fetchAnimeAndRender("", pageNumber); 
+  });
 };
-
 
 // the seachbar function
 document.querySelector(".search-icon").addEventListener("click", function () {
@@ -160,9 +166,11 @@ document.querySelector(".search-icon").addEventListener("click", function () {
 
 // searchfunctionworks
 
-async function fetchAnimeAndRender(search) {
+async function fetchAnimeAndRender(search, page) {
   try {
-    const response = await fetch(`https://api.jikan.moe/v4/anime?q=${search}&limit=20`);
+    const response = await fetch(
+      `https://api.jikan.moe/v4/anime?q=${search}&limit=20&page=${page || 1}`
+    );
     if (!response.ok) {
       throw new Error("Network response was not ok.");
     }
@@ -174,8 +182,6 @@ async function fetchAnimeAndRender(search) {
       throw new Error("Unexpected data format from API.");
     }
 
-
-    
     // Limit to first 20 results for simplicity
     const animeList = data.data.slice(0, 20);
 
@@ -193,22 +199,21 @@ async function fetchAnimeAndRender(search) {
 
     // Render anime
     renderAnime(animeObjects);
+    
   } catch (error) {
     console.error("Error fetching or rendering anime:", error);
     // Handle error appropriately (e.g., show error message to user)
   }
-}
+ } 
 
 function renderAnime(animeList) {
-  console.log("Anime List:", animeList);
   const mainSection = document.getElementById("main-section");
   mainSection.innerHTML = ""; // Clear previous content
 
   animeList.forEach((anime) => {
     const card = document.createElement("div");
     card.setAttribute("class", "movie-card");
-    card.innerHTML = 
-    `
+    card.innerHTML = `
     
           <a href = "Movie detiles.html?animeId=${anime.id}">
         <img src="${anime.imageUrl}" alt="${anime.title}">
@@ -252,11 +257,10 @@ document
     if (searchInput) {
       await fetchAnimeAndRender(searchInput);
     }
-  }); 
-if (sessionStorage.getItem("userID" , null) === null){
-
+  });
+if (sessionStorage.getItem("userID", null) === null) {
   let navbar = document.getElementById("navbar");
-  navbar.innerHTML= `<div class="navbar-container">
+  navbar.innerHTML = `<div class="navbar-container">
             <div class="logo-container">
               <h6 id="logo"> ANIMOVES</h6>
              
@@ -280,4 +284,3 @@ if (sessionStorage.getItem("userID" , null) === null){
            <i id="btnMenu" class="fa-solid fa-bars"></i>
           </div>`;
 }
-
