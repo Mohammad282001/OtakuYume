@@ -38,15 +38,22 @@ body, html {
     background-color: #1A161F;
 }
 
-.offer-text h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+
+.offer-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.offer-text h3 {
+   
+    text-align: center;
 }
 
 .offer-text p {
-    width: 500px;
-    font-size: 16px;
-    margin-bottom: 20px;
+    
+    text-align: center;
+    
 }
 
 .video-preview img {
@@ -133,10 +140,17 @@ body, html {
     .form-container {
         max-width: 100%;
     }
+
+    .left-section{
+        display: none;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-    .left-section, .right-section {
+    .left-section{
+        display: none;
+    }
+     .right-section {
         padding: 10px;
     }
 

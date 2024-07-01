@@ -19,6 +19,10 @@ const app = initializeApp(firebaseConfig);
 function showMessage(message, divId) {
     let messageDiv = document.getElementById(divId);
     messageDiv.style.display = "block";
+    if(message === "Account created successfully"){
+        messageDiv.style.color="green";
+
+    }
     messageDiv.innerHTML = message;
     messageDiv.style.opacity = 1;
     setTimeout(function () {
@@ -36,6 +40,11 @@ signUp.addEventListener('click', (event) => {
     const password = document.getElementById("signUpPassword").value;
     const name = document.getElementById("signUpName").value;
     const confirmPassword = document.getElementById("confirmPassword").value;
+
+    if (!name) {
+        showMessage("Name is required", "signUpMessage");
+        return;
+    }
 
     if (password !== confirmPassword) {
         showMessage("Passwords do not match", "signUpMessage");
