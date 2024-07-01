@@ -1,16 +1,36 @@
 const linksSidebar = [
   { nameSidebar: "MENU", noHover: true },
-  { nameSidebar: "Discovery", url: "/index.html", iconSidebar: "fab fa-cc-discover" },
-  { nameSidebar: "Top Rated", url: "/pages/topratedpage.html", iconSidebar: "far fa-star" },
-  { nameSidebar: "Coming Soon", url: "#", iconSidebar: "fas fa-stopwatch" },
+  { nameSidebar: "Home", url: "/index.html", iconSidebar: "fas fa-home" },
+
   {
-    nameSidebar: "Dark Mode",
-    url: "#",
-    iconSidebar: "fas fa-moon",
-    id: "dark-mode-link",
+    nameSidebar: "Browse Anime",
+    url: "/pages/Browse Anime.html",
+    iconSidebar: "fas fa-filter",
   },
-  { nameSidebar: "Setting", url: "#", iconSidebar: "fas fa-cog" },
-  { nameSidebar: "About us", url: "#", iconSidebar: "fas fa-address-card" },
+  {
+    nameSidebar: "Top Rated",
+    url: "/pages/topratedpage.html",
+    iconSidebar: "far fa-star",
+  },
+  {
+    nameSidebar: "About us",
+    url: "/pages/aboutUs.html",
+    iconSidebar: "fas fa-address-card",
+    id: "About",
+  },
+
+  {
+    nameSidebar: "Contact us",
+    url: "/pages/contactUs.html",
+    iconSidebar: "fas fa-envelope",
+  },
+
+  { nameSidebar: "Setting", url: "/pages/profile.html", iconSidebar: "fas fa-cog" },
+  {
+    nameSidebar: "Log out",
+    url: "/pages/login.html",
+    iconSidebar: "fas fa-sign-out-alt",
+  },
 ];
 
 const sidebar = document.getElementById("sidebar");
@@ -37,16 +57,6 @@ linksSidebar.forEach((link) => {
     a.id = link.id;
   }
 
-  if (link.nameSidebar === "Dark Mode") {
-    const darkModeToggle = document.createElement("div");
-    darkModeToggle.classList.add("dark-mode-toggle");
-    darkModeToggle.addEventListener("click", toggleDarkMode);
-    a.appendChild(darkModeToggle);
-    const toggleButton = document.createElement("div");
-    toggleButton.classList.add("toggle-button");
-    darkModeToggle.appendChild(toggleButton);
-  }
-
   a.insertAdjacentHTML(
     "beforeend",
     `<span class="link-text">${link.nameSidebar}</span>`
@@ -56,9 +66,3 @@ linksSidebar.forEach((link) => {
 });
 
 sidebar.appendChild(ulSidebar);
-
-function toggleDarkMode() {
-  document.body.classList.toggle("dark-mode");
-  const darkModeToggle = document.querySelector(".dark-mode-toggle");
-  darkModeToggle.classList.toggle("on");
-}

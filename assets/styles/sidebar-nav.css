@@ -45,37 +45,7 @@
     margin-right: 8px;
   }
   
-  .dark-mode-toggle {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 40px;
-    height: 20px;
-    border-radius: 10px;
-    background-color: #b43feb;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2px;
-    z-index: 1000;
-    transition: 0.3s ease;
-  }
-  
-  .dark-mode-toggle .toggle-button {
-    width: 16px;
-    height: 16px;
-    left: 5px;
-    position: absolute;
-    border-radius: 50%;
-    background-color: #fff;
-    transition: transform 0.3s ease;
-  }
-  
-  .dark-mode-toggle.on .toggle-button {
-    transform: translateX(16px);
-  }
-  
+
   /* Add specific style for the "Discovery" icon */
   .sidebar a .fa-cc-discover {
     color: #ffffff;
@@ -94,7 +64,7 @@
     margin-right: 10px;
   }
   
-  #dark-mode-link {
+  #About {
     margin-top: 45px;
   }
   
@@ -253,6 +223,7 @@
     .sidebar a {
         justify-content: center;
         padding: 10px 5px;
+        color: rgb(255, 255, 255);
     }
 
     .sidebar a .link-text {
