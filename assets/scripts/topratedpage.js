@@ -134,6 +134,8 @@ function renderAnime(animeList) {
     const card = document.createElement("div");
     card.setAttribute("class", "movie-card");
     // card.classList.add("card");
+       
+
     card.innerHTML = `
       <img src="${anime.imageUrl}" alt="${anime.title}">
       <div>

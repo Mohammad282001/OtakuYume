@@ -285,10 +285,12 @@ body {
 section {
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  gap: 12px;
+  gap: 20px;
+ max-width: 1500px;
 }
 .rating {
   color: yellow;
+  margin-top: 160px;
 }
 
 /* .movie-card:last-child img{
@@ -297,7 +299,7 @@ section {
 } */
 
 img{
-  width: 250px;
+  width: 200px;
 }
 /* @media screen and (max-width: 768px) {
   .sidebar {
@@ -426,5 +428,19 @@ p{
 }
 
 h2{
-  font-size: 18px;
+  font-size: 14px;
+  padding-top: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
