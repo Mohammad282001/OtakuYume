@@ -3,7 +3,27 @@ body {
     color: aliceblue;
 }
 
-.full-height {
+.img-fluid {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px #b43feb; /* Subtle shadow */
+  animation: bounce-in 2s ease infinite alternate; /* تطبيق الحركة */
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+
+
+
+/* .full-height {
     height: 100vh;
     box-sizing: border-box;
 }
@@ -29,7 +49,7 @@ body {
 .profile-row p {
     font-size: 1rem;
     margin-top: 20px;
-}
+} */
 
 @media only screen and (max-width: 1023px) {
     .profile-row {
