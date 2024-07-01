@@ -183,29 +183,12 @@ document
       await fetchAnimeAndRender(searchInput);
     }
   });
-if (sessionStorage.getItem("userID", null) === null) {
-  let navbar = document.getElementById("navbar");
-  navbar.innerHTML = `<div class="navbar-container">
-            <div class="logo-container">
-              <h6 id="logo"> ANIMOVES</h6>
-             
-            </div>
-            <div class="menu-container">
-              
-              <a href="index.html"><li class="liNavbar active">Home</li></a>
-              <li class="liNavbar">Movies</li>
-              <li class="liNavbar">Series</li>
-            </div>
-    
-            <div class="profile-container">
-              <div style="margin: 15px;">
-                <span class="fas fa-search" > </span>
-              </div>
-              <div>
-              <button type="button" onclick="window.location.href='pages/login.html'" class="btn btn-light" style="background-color:#b43feb;color: #ffffff;border-color: #b43feb ;">Login</button>
-               </div>
-              
-            </div>
-           <i id="btnMenu" class="fa-solid fa-bars"></i>
-          </div>`;
-}
+  if (sessionStorage.getItem("userID" , null) === null){
+
+    let navbar = document.getElementById("navbar");
+    navbar.innerHTML= `<a href="/index.html"> <img src="../assets/images/logo.png"  alt=""  style="width: 3rem; height: 3rem;"></a>
+                   <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: center;">
+                   </div>
+                   <button type="button" id="search-button" class="btn" onclick="window.location.href='login.html'" style= "background-color:#B43FEB ; color: white ; border-radius: 24px; border-color: #B43FEB; margin-right:80px; ">Login</button>
+                    `;
+                    }

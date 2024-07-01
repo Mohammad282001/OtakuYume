@@ -16,31 +16,11 @@
 
 <body>
   <!-- navbar -->
-  <div class="navbar" id="navbar">
-    <div class="navbar-container">
-      <div class="logo-container">
-        <h1 id="logo"></h1>
-        ANIMOVES
-      </div>
-      <div class="menu-container">
-        <ul class="ulNavbar"></ul>
-        <li class="liNavbar active">Home</li>
-        <li class="liNavbar">Movies</li>
-        <li class="liNavbar">Series</li>
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-black" id="navbar">
 
-      <div class="profile-container">
-        <div>
-          <span class="fas fa-search"> </span>
-          <span class="fas fa-bell"></span>
-        </div>
-        <div>
-          <img id="user-picture" src="../assets/images/user.png" alt="" />
-          <i class="fas fa-caret-down"></i>
-        </div>
-      </div>
-    </div>
-  </div>
+    <a href="/index.html"> <img src="../assets/images/logo.png"  alt=""  style="width: 3rem; height: 3rem;  "></a>
+     
+   </nav>
 
   <!-- sidebar -->
   <div class="sidebar" id="sidebar"></div>
@@ -612,7 +592,20 @@
       console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
     }
     // ]]>
+
+    if (sessionStorage.getItem("userID" , null) === null){
+
+    let navbar = document.getElementById("navbar");
+    navbar.innerHTML= `<a href="/index.html"> <img src="../assets/images/logo.png"  alt=""  style="width: 3rem; height: 3rem;"></a>
+                   <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: center;">
+                   </div>
+                   <button type="button" id="search-button" class="btn" onclick="window.location.href='login.html'" style= "background-color:#B43FEB ; color: white ; border-radius: 24px; border-color: #B43FEB; margin-left : 10px">Login</button>
+                    `;
+                    }
   </script>
+
+
+
 </body>
 
 </html>

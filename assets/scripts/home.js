@@ -168,6 +168,7 @@ function createCard(id, imageUrl, title, synopsis) {
                          <button type="button" id="search-button" class="btn" onclick="window.location.href='pages/login.html'" style= "background-color:#B43FEB ; color: white ; border-radius: 24px; border-color: #B43FEB; margin-left : 10px">Login</button>
                           `;
                           }
+                           
 
                           
 

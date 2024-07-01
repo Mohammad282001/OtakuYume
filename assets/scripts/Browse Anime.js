@@ -89,3 +89,13 @@ ageRatingDropdown.addEventListener("change", function () {
   const selectedRating = ageRatingDropdown.value;
   fetchAnimeAndRender(selectedType, selectedRating);
 });
+
+if (sessionStorage.getItem("userID" , null) === null){
+
+  let navbar = document.getElementById("navbar");
+  navbar.innerHTML= `<a href="/index.html"> <img src="../assets/images/logo.png"  alt=""  style="width: 3rem; height: 3rem;"></a>
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: center;">
+                 </div>
+                 <button type="button" id="search-button" class="btn" onclick="window.location.href='../pages/login.html'" style= "background-color:#B43FEB ; color: white ; border-radius: 24px; border-color: #B43FEB; margin-right:80px; ">Login</button>
+                  `;
+                  }

@@ -81,3 +81,10 @@ logoutButton.addEventListener("click", () => {
       console.error("Error signing out:", error);
     });
 });
+
+if (sessionStorage.getItem("userID" , null) === null){
+
+  let logout = document.getElementById("logouttest");
+  logout.style.display="none";
+  
+                  }
