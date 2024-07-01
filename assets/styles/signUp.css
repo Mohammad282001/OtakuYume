@@ -130,11 +130,17 @@ body, html {
     .form-container {
         max-width: 100%;
     }
+    .left-section{
+        display: none;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-    .left-section, .right-section {
+     .right-section {
         padding: 10px;
+    }
+    .left-section{
+        display: none;
     }
 
     .form-container h2 {
