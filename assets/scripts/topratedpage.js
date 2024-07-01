@@ -1,4 +1,3 @@
-
 // the api
 function Anime(id, title, synopsis, episodes, imageUrl, score) {
   this.id = id;
@@ -57,7 +56,6 @@ function renderAnime(animeList) {
     const card = document.createElement("div");
     card.setAttribute("class", "movie-card");
     // card.classList.add("card");
-       
 
     card.innerHTML = `
       <img src="${anime.imageUrl}" alt="${anime.title}">
@@ -74,12 +72,12 @@ function renderAnime(animeList) {
 // Call fetchAnimeAndRender with a default search query when the page loads
 window.onload = function () {
   fetchAnimeAndRender(""); // Default search query example ('naruto')
-// pagenation
+  // pagenation
   const pages = document.getElementById("pages");
-  
+
   pages.addEventListener("click", (event) => {
     const pageNumber = event.target.innerHTML;
-    fetchAnimeAndRender("", pageNumber); 
+    fetchAnimeAndRender("", pageNumber);
   });
 };
 
@@ -124,12 +122,11 @@ async function fetchAnimeAndRender(search, page) {
 
     // Render anime
     renderAnime(animeObjects);
-    
   } catch (error) {
     console.error("Error fetching or rendering anime:", error);
     // Handle error appropriately (e.g., show error message to user)
   }
- } 
+}
 
 function renderAnime(animeList) {
   const mainSection = document.getElementById("main-section");
@@ -140,7 +137,7 @@ function renderAnime(animeList) {
     card.setAttribute("class", "movie-card");
     card.innerHTML = `
     
-          <a href = "Movie detiles.html?animeId=${anime.id}">
+      <a href = "Movie detiles.html?animeId=${anime.id}&uu=99">
         <img src="${anime.imageUrl}" alt="${anime.title}">
       <div>
         <h2>${anime.title}</h2>
