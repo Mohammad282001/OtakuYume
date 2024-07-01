@@ -63,7 +63,7 @@
 
       <div id="imageANDdetiles" style="display: flex;">
 
-        <div class="card-body d-flex justify-content-center align-items-center">
+        <div class="card-body d-flex justify-content-center">
 
           <div class="container text-center" style="height: -webkit-fill-available;">
             <!----------------title------------------->
@@ -75,8 +75,8 @@
               font-size: 3rem;
 
             " id="titleDetiles">
-          </p>
-          <p id="year-id" style="color: #ffffff; text-align: start;
+            </p>
+            <p id="year-id" style="color: #ffffff; text-align: start;
 ;
 "></p>
             <!----------------/title------------------->
@@ -88,30 +88,30 @@
                             font-size: small;
                             padding-bottom: 0.25rem;
                           " id="category" ;>
-            <!------------------category------------------>
+                  <!------------------category------------------>
                   <i class="bi bi-film"></i> <!--Action • Crime -->
                   <!-------------------category----------------->
-                <h6 style="
+                  <h6 style="
                             color: #ffffff;
                             text-align: left;
                             font-size: small;
                             padding-bottom: 0.25rem;
                           ">
-                  <!-- episodes -->
-                  <p id="episodes-id">Episodes
-                  <p id="score">
+                    <!-- episodes -->
+                    <p id="episodes-id">Episodes
+                    <p id="score">
 
 
-                    <!------------------------------------------------->
-                    <i class="bi bi-star-fill" style="color: yellow"></i>
-                    <!----------------------------------------------->
-                </h6>
+                      <!------------------------------------------------->
+                      <i class="bi bi-star-fill" style="color: yellow"></i>
+                      <!----------------------------------------------->
+                  </h6>
 
               </div>
 
               <!-- ======= Like Shear button start =========== -->
               <div class="col">
-                
+
                 <p id="rating-id" style="color: #ffffff; ;margin-right: 1rem;text-align: end"></p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 
@@ -168,10 +168,13 @@
       </div>
       <!-- ======= story line end =========== -->
       <!-- youtube trailer -->
-      <div id="trailer-container" >
+      <div id="trailer-container" style="display:flex; justify-content: center; margin: 3rem;
+  flex-direction: column;
+  align-items: center;">
+        <p style="color: #ffffff; font-weight: 600; font-size:2rem;text-shadow: 1px 1px #B43FEB;">Trailer</p>
         <iframe id="trailer-id" width="420" height="345" src="">
         </iframe>
-        
+
       </div>
       <!-- /youtube trailer -->
 
@@ -189,7 +192,7 @@
             
           "></div>
 
-          
+
       <!-- ---------- Line end --------------- -->
 
 
@@ -508,17 +511,7 @@
             <button id="prev-slide" class="slide-button material-symbols-rounded">
               <i class="bi bi-arrow-left-circle-fill"></i>
             </button>
-            <ul class="image-list">
-              <img class="image-item" src="../assets/images/img3.png" alt="img-1" />
-              <img class="image-item" src="../assets/images/img2.png" alt="img-2" />
-              <img class="image-item" src="../assets/images/img1.png" alt="img-3" />
-              <img class="image-item" src="../assets/images/img3.png" alt="img-4" />
-              <img class="image-item" src="../assets/images/img2.png" alt="img-5" />
-              <img class="image-item" src="../assets/images/img1.png" alt="img-6" />
-              <img class="image-item" src="../assets/images/img3.png" alt="img-7" />
-              <img class="image-item" src="../assets/images/img2.png" alt="img-8" />
-              <img class="image-item" src="../assets/images/img1.png" alt="img-9" />
-              <img class="image-item" src="../assets/images/img3.png" alt="img-10" />
+            <ul class="image-list" id="image-list" style="height: fit-content;">
             </ul>
             <button id="next-slide" class="slide-button material-symbols-rounded">
               <i class="bi bi-arrow-right-circle-fill"></i>
@@ -532,6 +525,7 @@
         </div>
       </section>
     </div>
+
     <!-- ========== Recommendatiion end ======== -->
 
     <!-- ================ footer ============= -->
@@ -595,9 +589,9 @@
 
           const year = document.getElementById("year-id");
           if (anime.year !== null)
-          year.innerHTML += `(${anime.year})`
+            year.innerHTML += `(${anime.year})`
           /*******************************\year*****************************/
-        
+
           /****************************category******************************/
           const category = document.getElementById("category");
           for (let count = 0; count < anime.genres.length; count++) {
@@ -608,8 +602,8 @@
 
           /****************************episodes******************************/
           const episodes = document.getElementById("episodes-id");
-          if(anime.type.toLowerCase() == "Movie".toLowerCase())
-          episodes.innerHTML = `${anime.type} ‧ ${anime.duration} `
+          if (anime.type.toLowerCase() == "Movie".toLowerCase())
+            episodes.innerHTML = `${anime.type} ‧ ${anime.duration} `
           if (anime.type.toLowerCase() == "tv".toLowerCase())
             if (anime.episodes !== null) {
               episodes.innerHTML = `Episodes: ${anime.episodes} ‧ ${anime.duration}`
@@ -621,8 +615,8 @@
           /****************************rating******************************/
           const rating = document.getElementById("rating-id");
           if (anime.rating !== null)
-          rating.innerHTML += `${anime.rating}`
-        
+            rating.innerHTML += `${anime.rating}`
+
           /****************************\rating******************************/
 
           /****************************score******************************/
@@ -644,10 +638,10 @@
             const trailerEmbedUrl = anime.trailer.embed_url;
             if (trailerEmbedUrl) {
               document.getElementById('trailer-id').src = trailerEmbedUrl;
-              console.log("we find a url "+ trailerEmbedUrl )
+              console.log("we find a url " + trailerEmbedUrl)
             } else {
               console.log("we didnot" + trailerEmbedUrl)
-              document.getElementById('trailer-container').innerHTML = '<p style="color=while;">Trailer not available</p>';
+              document.getElementById('trailer-container').innerHTML = '<p style="color: #ffffff; font-weight: 400; font-size:1.5rem;text-decoration: underline;">Trailer Not Available</p>';
             }
           };
           loadAnimeTrailer(anime.mal_id);
@@ -656,6 +650,57 @@
 
 
           // Add more details as needed
+
+
+          function createCard2(id, imageUrl) {
+
+            const mainDiv2 = document.getElementById("image-list");
+            const linkComing = document.createElement("a");
+            linkComing.href = `Movie detiles.html?animeId=${id}`;
+            linkComing.onclick = () => {
+              sessionStorage.setItem("animeId", id);
+            };
+            mainDiv2.appendChild(linkComing);
+            const imageComing = document.createElement("img");
+            imageComing.setAttribute("alt", "image");
+            imageComing.src = imageUrl;
+            linkComing.appendChild(imageComing);
+            imageComing.style.borderRadius="10%";
+
+          }
+
+
+          fetch(`https://api.jikan.moe/v4/anime/${animeId}/recommendations`)
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Network response was not ok " + response.statusText);
+              }
+              return response.json();
+            })
+            .then((data) => {
+              if (Array.isArray(data.data)) {
+                data.data.slice(0, 10).forEach((information) => {
+                  createCard2(
+                    information.entry.mal_id,
+                    information.entry.images.jpg.image_url
+                  );
+                });
+              } else {
+                console.error("Data is not an array:", data);
+              }
+            })
+            .catch((error) => {
+              console.error("There was a problem with the fetch operation:", error);
+            });
+
+
+
+
+
+
+
+
+
 
         })
         .catch((error) => {
