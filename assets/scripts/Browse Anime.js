@@ -123,3 +123,15 @@ ageRatingDropdown.addEventListener("change", function () {
   );
   fetchAnimeAndRender(searchInput, selectedType, selectedRating);
 });
+if (sessionStorage.getItem("userID" , null) === null){
+
+  let navbar = document.getElementById("navbar");
+  navbar.innerHTML= `<a href="/index.html"> <img src="../assets/images/logo.png"  alt=""  style="width: 3rem; height: 3rem; margin-right: 5rem;  "></a>
+
+  <div class="logo-container" style="font-size: x-large; text-align:start; color: #ffffff; margin-top:-10px; margin-left: -60px; text-shadow: 1px 4px 4px #b43feb !important">
+    <h1 id="logo" ></h1>
+    OtakuYume
+  </div>
+                 <button type="button" id="search-button" class="btn" onclick="window.location.href='login.html'" style= "background-color:#B43FEB ; color: white ; border-radius: 24px; border-color: #B43FEB; margin-right:30px;">Login</button>
+                  `;
+                  }
