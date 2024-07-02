@@ -25,7 +25,7 @@ async function fetchAnimeAndRender(search, page) {
     }
 
     // Limit to first 20 results for simplicity
-    const animeList = data.data.slice(0, 20);
+    const animeList = data.data.slice(0, 18);
 
     // Map through anime and create Anime objects
     const animeObjects = animeList.map((anime) => {
@@ -92,7 +92,8 @@ document.querySelector(".search-icon").addEventListener("click", function () {
 async function fetchAnimeAndRender(search, page) {
   try {
     const response = await fetch(
-      `https://api.jikan.moe/v4/anime?q=${search}&limit=20&page=${page || 1}`
+      `https://api.jikan.moe/v4/top/anime?page=${page || 1}
+`
     );
     if (!response.ok) {
       throw new Error("Network response was not ok.");
