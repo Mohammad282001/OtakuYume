@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/assets/styles/topratedpage.css" />
     <link rel="stylesheet" href="../assets/styles/sidebar-nav.css" />
 
-    <style>
+    <!-- <style>
       #navbar {
           padding: 1rem;
     background-color:black;
@@ -51,17 +51,17 @@
           background-color: white;
           color: #B43FEB;
       }
-    </style>
+    </style> -->
 
   </head>
   <body>
     <!-- Navbar -->
-    <div class="navbar">
+    <!-- <div class="navbar">
       <div class="navbar-container">
         <div class="logo-container">
-          <h1 id="logo"></h1>
+          <h1 id="logo"></h1> -->
           <!-- <h1 class="maintitle">Top Rated</h1> -->
-        </div>
+        <!-- </div>
         <div class="menu-container">
           <ul class="ulNavbar">
             <li class="liNavbar active">
@@ -72,9 +72,9 @@
             </li>
             <li class="liNavbar">Series</li>
           </ul>
-        </div>
+        </div> -->
         <!-- Searchbar -->
-        <div class="searchbar">
+        <!-- <div class="searchbar">
           <input id="search-input" type="text" placeholder="Search ..." />
           <button id="search-button">Search</button>
         </div>
@@ -88,10 +88,68 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Sidebar -->
-    <div class="sidebar" id="sidebar"></div>
+    <!-- <div class="sidebar" id="sidebar"></div> -->
+
+  <!-- navbar -->
+  <div class="navbar">
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <div class="logo-container" style="font-size: x-large; text-align: center; color: #ffffff; margin-left: -35px !important; text-shadow: 1px 4px 4px #b43feb !important">
+      <h1 id="logo" ></h1>
+      OtakuYume
+    </div>
+    <div class="menu-container" style="text-align: center; margin-top: 17px;">
+      <ul class="ulNavbar"></ul>
+      <li class="liNavbar active">
+        <a href="http://127.0.0.1:5501/index.html" style="text-decoration: none">Home</a>
+      </li>
+      <li class="liNavbar">
+        <a href="http://127.0.0.1:5502/pages/topratedpage.html" style="text-decoration: none">Movies</a>
+      </li>
+      <li class="liNavbar">Series</li>
+    </div>
+    </div>
+    <!-- searchbar -->
+    <div class="searchbar">
+      <input id="search-input" type="text" placeholder="Search ..." />
+      <button id="search-button">Search</button>
+    </div>
+    <!-- ................... -->
+    <!-- <div class="profile-container">
+      <div class="search-icon">
+        <span class="fas fa-search"> </span>
+      </div>
+      <div>
+        <img id="user-picture" src="/assets/images/user.png" alt="" />
+        <i class="fas fa-caret-down"></i>
+      </div>
+    </div> -->
+
+  </div>
+
+  <!-- sidebar -->
+  <main style="display: grid; grid-template-columns: 15% 85%;">
+    <section>
+      <div class="sidebar" id="sidebar"></div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Main Container -->
     <div class="top-rated">

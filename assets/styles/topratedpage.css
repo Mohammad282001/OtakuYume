@@ -1,10 +1,10 @@
-* {
+/* * {
   margin: 0;
-}
+} */
 
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
+  /* margin: 0; */
 
 
   background-color: #0d0c0f;
@@ -33,16 +33,16 @@ body {
   /* display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
   display: flex;
-  gap: 15px;
+  gap: 10px;
   flex-wrap: wrap;
-  margin-left: 285px;
+  margin-left: 10px;
   margin-top: 80px;
 }
 .movie-card {
   background-color: #33333344;
   color: white;
   border-radius: 10px;
-  gap: 17px;
+  gap: 10px;
   border-radius: 25px;
   display: flex;
   /* width: 33%; */
@@ -125,10 +125,11 @@ body {
 }
 
 section {
+  margin-top: 20px;
   display: grid;
   grid-template-columns: 33% 33% 33%;
   gap: 20px;
- max-width: 1500px;
+ max-width: 1200px;
 }
 .rating {
   color: yellow;
