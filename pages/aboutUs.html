@@ -1,225 +1,223 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-<!-- Link Swiper's CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<link rel="stylesheet" href="../assets/styles/aboutUs.css">
-<link rel="stylesheet" href="../assets/styles/sidebar-nav.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="../assets/styles/aboutUs.css">
+
 </head>
 <style>
-  #navbar {
-      padding: 1rem;
-background-color:black;
-  }
-
-  #search-input {
-      border-radius: 24px;
-      padding: 0.5rem 1rem;
-      border: 1px solid #B43FEB;
-      background-color: transparent;
-      color: white;
-      transition: background-color 0.3s ease, color 0.3s ease;
-  }
-
-  #search-input::placeholder {
-      color: #B43FEB;
-  }
-
-  #search-input:focus {
-      background-color: #B43FEB;
-      color: white;
-  }
-
-  #search-button {
-      margin-right: 4rem;
-      background-color: #B43FEB;
-      color: white;
-      border-radius: 24px;
-      border: none;
-      padding: 0.5rem 1rem;
-      transition: background-color 0.3s ease;
-  }
-
-  #search-button:hover {
-      background-color: white;
-      color: #B43FEB;
+  nav {
+    position: fixed;
   }
 </style>
 
 <body>
+  <!--------------------------------header--------------------------------------->
 
-<div class="container-fluid d-flex flex-column min-vh-100">
-  <!---------------------header---------------------->
-  <!-- navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-black" id="navbar">
-    
+  <header>
+    <nav class="navbar navbar-expand-lg bg-darck ">
+      <div class="container-fluid" style="margin-left: 2rem;">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/images/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+        </a>
+        <a class="navbar-brand" href="#" style="color: #B43FEB;">OtakuYume</a>
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#" style="color: white;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: white;">Browse Anime</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#" style="color: white;">Contact us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#" style="color: white;">About us</a>
+            </li>
+          </ul>
+          <form style="margin-left: 45rem;">
+            <button id="logout" class="btn " type="submit"
+              style="color:white; border-color: #B43FEB; background-color: #B43FEB;">Logout</button>
+          </form>
+        </div>
+      </div>
+    </nav>
 
-    <a href="/index.html"> <img src="../assets/images/logo.png"  alt=""  style="width: 3rem; height: 3rem; margin-right: 5rem;  "></a>
+  </header>
+  <!--------------------------------end header--------------------------------------->
 
-    <div class="logo-container" style="font-size: x-large; text-align:start; color: #ffffff; margin-top:-10px; margin-left: -60px; text-shadow: 1px 4px 4px #b43feb !important">
-      <h1 id="logo" ></h1>
-      OtakuYume
-    </div>
-     
-   </nav>
-  <!-- container -->
-  <div class="content-container flex-grow-1 d-flex justify-content-center align-items-center">
-    <!---------------------end header---------------------->
-    <div class="row w-100">
-      <main class="col-12 px-md-4 text-center">
+  <main class="col-12 px-md-4 text-center">
+
+    <div class="container-fluid d-flex flex-column min-vh-100" style="margin-top: 20px;">
+
+
+      <div class="row w-100">
+
         <!------------------------body----------------------------->
-        <div class="container text-center profile-row">
+        <div class="container text-center profile-row mt-5"
+          style="border:0.1rem solid #b773d6; box-shadow:3px 3px 150px #b689cb;">
           <div class="row align-items-center justify-content-center" style="width: 100%;">
-            <div class="col-12" style="margin-top: 50px;">
-              <h2 style="margin: 70px 0;">About Us</h2>
+            <div class="col-12" style="margin: 3rem;">
+              <h2 style="margin: 1rem 0;">Welcome to OTAKUYUME!</h2>
             </div>
           </div>
 
-         <div class="row mt-5 justify-content-center">
-                  <!-- --------------- alaa ---------------------- -->
-
-  <div class="col-sm-6 col-md-3 mb-4">
-    <img src="../assets/images/alaa.png" class="img-fluid" alt="alaa">
-   <h5 style="font-size: 1.35rem; margin-top: 2rem; font-weight: 900; text-shadow: 1px 4px 4px #b43feb;">Alaa Ata</h5>
-         <p style="font-weight: 500; text-shadow: 1px 1px 1px #b43feb;">(Product Owner)</p>
-  <div style="display: flex; align-items: center; justify-content:center;  gap: 2rem;">
-      <a href="mailto:alaa.ata25@gmail.com" target="_blank" style="color: #fff;">
-      <i class="bi bi-envelope-fill" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
-      </a>
-      <a href="https://github.com/3la2i" target="_blank" style="color: #fff;">
-        <i class="bi bi-github" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/alaa-waleed-646b77300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="color: #fff;">
-      <i class="bi bi-linkedin" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
-      </a>
- </div>
-  </div>
-        <!-- --------------- alaa ---------------------- -->
+          <div class="row mt-1 justify-content-center">
 
 
+            <!-- --------------- alaa ---------------------- -->
 
-        <!-- --------------- mohammed ---------------------- -->
-
-  <div class="col-sm-6 col-md-3 mb-4">
-    <img src="../assets/images/mohammed.png" class="img-fluid" alt="mohammed">
-    <h5 style="font-size: 1.35rem; margin-top: 2rem; font-weight: 900; text-shadow: 1px 4px 4px #b43feb;">Mohammad Abdallah</h5>
-          <p style="font-weight: 500; text-shadow: 1px 1px 1px #b43feb;">(Scrum Master)</p>
-  <div style="display: flex; align-items: center; justify-content:center;  gap: 2rem;">
-      <a href="mailto:ib.mohammadabdallah@gmail.com"target="_blank" style="color: #fff;">
-      <i class="bi bi-envelope-fill" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
-      </a>
-      <a href="https://github.com/Mohammad282001" target="_blank" style="color: #fff;">
-        <i class="bi bi-github" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/mohammad-abdallah28/" target="_blank" style="color: #fff;">
-      <i class="bi bi-linkedin" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
-      </a>
- </div>
-  </div>
-        <!-- --------------- mohammed ---------------------- -->
-
-
-      <!-- --------------- yousef ---------------------- -->
-
-  <div class="col-sm-6 col-md-3 mb-4">
-    <img src="../assets/images/yousef.png" class="img-fluid" alt="yousef">
-    <h5 style="font-size: 1.35rem; margin-top: 2rem; font-weight: 900; text-shadow: 1px 4px 4px #b43feb;">Yousef Borini</h5>
-        <p style="font-weight: 500; text-shadow: 1px 1px 1px #b43feb;">(Quality Assurance)</p>
-  <div style="display: flex; align-items: center; justify-content:center;  gap: 2rem;">
-      <a href="mailto:yousfborinii@gmail.com"target="_blank" style="color: #fff;">
-      <i class="bi bi-envelope-fill" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
-      </a>
-      <a href="https://github.com/yousefborini02" target="_blank" style="color: #fff;">
-        <i class="bi bi-github" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/yousef-borini-0485b3307/" target="_blank" style="color: #fff;">
-      <i class="bi bi-linkedin" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
-      </a>
- </div>
-  </div>
-    <!-- --------------- yousef ---------------------- -->
-
-</div>
-
-  <!-- --------------- Aya ---------------------- -->
-<div class="row mt-5 justify-content-center">
-  <div class="col-sm-6 col-md-3 mb-4">
-    <img src="../assets/images/aya.png" class="img-fluid" alt="aya">
- <h5 style="font-size: 1.35rem; margin-top: 2rem; font-weight: 900; text-shadow: 1px 4px 4px #b43feb;">Aya Rimawi</h5>
-      <p style="font-weight: 500; text-shadow: 1px 1px 1px #b43feb;">(Developer)</p>
-  <div style="display: flex; align-items: center; justify-content:center;  gap: 2rem;">
-      <a href="mailto:ayaalrimawi406@gmail.com" target="_blank" style="color: #fff;">
-      <i class="bi bi-envelope-fill" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
-      </a>
-      <a href="https://github.com/AyahRimawi" target="_blank" style="color: #fff;">
-        <i class="bi bi-github" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/aya-rimawi-284730134/" target="_blank" style="color: #fff;">
-      <i class="bi bi-linkedin" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
-      </a>
- </div>
-  </div>
-    <!-- --------------- Aya ---------------------- -->
+            <div class="col-sm-6 col-md-3 mb-4">
+              <img src="../assets/images/alaa.png" class="img-fluid" alt="alaa">
+              <h5 style="font-size: 1.35rem; margin-top: 2rem; font-weight: 900; text-shadow: 1px 4px 4px #b43feb;">Alaa
+                Ata</h5>
+              <p style="font-weight: 500; text-shadow: 1px 1px 1px #b43feb;">(Product Owner)</p>
+              <div style="display: flex; align-items: center; justify-content:center;  gap: 2rem;">
+                <a href="mailto:alaa.ata25@gmail.com" target="_blank" style="color: #fff;">
+                  <i class="bi bi-envelope-fill" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
+                </a>
+                <a href="https://github.com/3la2i" target="_blank" style="color: #fff;">
+                  <i class="bi bi-github" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/alaa-waleed-646b77300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank" style="color: #fff;">
+                  <i class="bi bi-linkedin" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
+                </a>
+              </div>
+            </div>
+            <!-- --------------- alaa ---------------------- -->
 
 
-  <!-- --------------- Sondos ---------------------- -->
-<div class="col-sm-6 col-md-3 mb-4">
-  <img src="../assets/images/sondos.png" class="img-fluid" alt="sondos">
-  <h5 style="font-size: 1.35rem; margin-top: 2rem; font-weight: 900; text-shadow: 1px 4px 4px #b43feb;">Sondos Abed Alkadeer</h5>
-      <p style="font-weight: 500; text-shadow: 1px 1px 1px #b43feb;">(Developer)</p>
-  <div style="display: flex; align-items: center; justify-content:center;  gap: 2rem;">
-      <a href="mailto:salehsondos135@gmail.com" target="_blank" style="color: #fff;">
-      <i class="bi bi-envelope-fill" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
-      </a>
-      <a href="https://github.com/SondosAlnbabteh" target="_blank" style="color: #fff;">
-        <i class="bi bi-github" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/sondos-alnbabteh-3ab81329a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="color: #fff;">
-      <i class="bi bi-linkedin" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
-      </a>
- </div>
-</div>
-  <!-- --------------- Sondos ---------------------- -->
 
-</div>
+            <!-- --------------- mohammed ---------------------- -->
 
-   <div class="container" style="margin: 5rem 0; border: solid #b43feb; box-shadow: 2px 2px 2px #b43feb;">
-        <h1 style="margin: 2rem 0; font-weight: 900; text-shadow: 1px 2px 2px #b43feb;">Welcome to OTAKUYUME!</h1>
-        <p>OTAKUYUME is your ultimate destination for all things anime. Whether you're discovering new series or revisiting classics, we provide comprehensive information including ratings, descriptions, episode counts, and more to guide your anime journey.</p>
-        <p>Explore character bios, plot summaries, and user reviews to enrich your experience. OTAKUYUME is driven by a community passionate about anime, catering to both seasoned fans and newcomers alike.</p>
-        <div class="highlight">
-            <p style="margin-bottom: 2rem"><strong>Join OTAKUYUME today to dive into the vibrant world of anime, where every series comes alive.</strong></p>
+            <div class="col-sm-6 col-md-3 mb-4">
+              <img src="../assets/images/mohammed.png" class="img-fluid" alt="mohammed">
+              <h5 style="font-size: 1.35rem; margin-top: 2rem; font-weight: 900; text-shadow: 1px 4px 4px #b43feb;">
+                Mohammad Abdallah</h5>
+              <p style="font-weight: 500; text-shadow: 1px 1px 1px #b43feb;">(Scrum Master)</p>
+              <div style="display: flex; align-items: center; justify-content:center;  gap: 2rem;">
+                <a href="mailto:ib.mohammadabdallah@gmail.com" target="_blank" style="color: #fff;">
+                  <i class="bi bi-envelope-fill" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
+                </a>
+                <a href="https://github.com/Mohammad282001" target="_blank" style="color: #fff;">
+                  <i class="bi bi-github" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mohammad-abdallah28/" target="_blank" style="color: #fff;">
+                  <i class="bi bi-linkedin" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
+                </a>
+              </div>
+            </div>
+            <!-- --------------- mohammed ---------------------- -->
+
+
+            <!-- --------------- yousef ---------------------- -->
+
+            <div class="col-sm-6 col-md-3 mb-4">
+              <img src="../assets/images/yousef.png" class="img-fluid" alt="yousef">
+              <h5 style="font-size: 1.35rem; margin-top: 2rem; font-weight: 900; text-shadow: 1px 4px 4px #b43feb;">
+                Yousef Borini</h5>
+              <p style="font-weight: 500; text-shadow: 1px 1px 1px #b43feb;">(Quality Assurance)</p>
+              <div style="display: flex; align-items: center; justify-content:center;  gap: 2rem;">
+                <a href="mailto:yousfborinii@gmail.com" target="_blank" style="color: #fff;">
+                  <i class="bi bi-envelope-fill" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
+                </a>
+                <a href="https://github.com/yousefborini02" target="_blank" style="color: #fff;">
+                  <i class="bi bi-github" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yousef-borini-0485b3307/" target="_blank" style="color: #fff;">
+                  <i class="bi bi-linkedin" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
+                </a>
+              </div>
+            </div>
+            <!-- --------------- yousef ---------------------- -->
+
+          </div>
+
+          <!-- --------------- Aya ---------------------- -->
+          <div class="row mt-5 justify-content-center">
+            <div class="col-sm-6 col-md-3 mb-4">
+              <img src="../assets/images/aya.png" class="img-fluid" alt="aya">
+              <h5 style="font-size: 1.35rem; margin-top: 2rem; font-weight: 900; text-shadow: 1px 4px 4px #b43feb;">Aya
+                Rimawi</h5>
+              <p style="font-weight: 500; text-shadow: 1px 1px 1px #b43feb;">(Developer)</p>
+              <div style="display: flex; align-items: center; justify-content:center;  gap: 2rem;">
+                <a href="mailto:ayaalrimawi406@gmail.com" target="_blank" style="color: #fff;">
+                  <i class="bi bi-envelope-fill" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
+                </a>
+                <a href="https://github.com/AyahRimawi" target="_blank" style="color: #fff;">
+                  <i class="bi bi-github" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/aya-rimawi-284730134/" target="_blank" style="color: #fff;">
+                  <i class="bi bi-linkedin" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
+                </a>
+              </div>
+            </div>
+            <!-- --------------- Aya ---------------------- -->
+
+
+            <!-- --------------- Sondos ---------------------- -->
+            <div class="col-sm-6 col-md-3 mb-4">
+              <img src="../assets/images/sondos.png" class="img-fluid" alt="sondos">
+              <h5 style="font-size: 1.35rem; margin-top: 2rem; font-weight: 900; text-shadow: 1px 4px 4px #b43feb;">
+                Sondos Abed Alkadeer</h5>
+              <p style="font-weight: 500; text-shadow: 1px 1px 1px #b43feb;">(Developer)</p>
+              <div style="display: flex; align-items: center; justify-content:center;  gap: 2rem;">
+                <a href="mailto:salehsondos135@gmail.com" target="_blank" style="color: #fff;">
+                  <i class="bi bi-envelope-fill" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
+                </a>
+                <a href="https://github.com/SondosAlnbabteh" target="_blank" style="color: #fff;">
+                  <i class="bi bi-github" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sondos-alnbabteh-3ab81329a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank" style="color: #fff;">
+                  <i class="bi bi-linkedin" style="font-size: 1.5rem; width: 20px; height: 20px;"></i>
+                </a>
+              </div>
+            </div>
+            <!-- --------------- Sondos ---------------------- -->
+
+            <!------------------------------------------------------------->
+            <div class="container" style="margin-bottom: 6rem;  width: 50rem; ">
+              <hr style="background-color: #fff;margin-bottom: 3rem; margin-top: 3rem;">
+              <h3 style="margin: 2rem 0; font-weight: 900; "> OTAKUYUME!</h3>
+              <p>OTAKUYUME is your ultimate destination for all things anime. Whether you're discovering new series or
+                revisiting classics, we provide comprehensive information including ratings, descriptions, episode
+                counts, and more to guide your anime journey.</p>
+              <p>Explore character bios, plot summaries, and user reviews to enrich your experience. OTAKUYUME is driven
+                by a community passionate about anime, catering to both seasoned fans and newcomers alike.</p>
+              <div class="highlight">
+                <p style="margin-bottom: 2rem"><strong>Join OTAKUYUME today to dive into the vibrant world of anime,
+                    where every series comes alive.</strong></p>
+              </div>
+            </div>
+            <!------------------------------------------------------------------------------->
+          </div>
+
+
         </div>
-   
-    </div>
 
-
-
-
-
-
-
-
-
-
-
-        </div>
         <!----------------------------body------------------------------->
-      </main>
+
+      </div>
     </div>
-  </div>
-  
-    <!-- ================ footer ============= -->
+  </main>
+
+
+  <!-- ================ footer ============= -->
     <footer class="text-center text-white py-3 mt-auto" style="box-shadow: 1px 1px 1px #000000">
       <div class="container">
         <!-- Social media icons -->
@@ -228,32 +226,32 @@ background-color:black;
         <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-google"></i></a>
         <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-instagram"></i></a>
         <!-- Copyright notice -->
-        <div style="color: whitesmoke">© 2024 anime movie.com</div>
+        <div style="color: whitesmoke">© 2024 OkatuYume.com</div>
       </div>
     </footer>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="../assets/scripts/sidebar.js"></script>
-<script src="../assets/scripts/home.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="../assets/scripts/sidebar.js"></script>
+  <script src="../assets/scripts/home.js"></script>
 
 
   <script>
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Get all elements with the class 'img-fluid'
-  var images = document.querySelectorAll('.img-fluid');
-  
-  // Add the 'animate' class to each image
-  images.forEach(function(image) {
-    image.classList.add('animate');
-  });
-});
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get all elements with the class 'img-fluid'
+      var images = document.querySelectorAll('.img-fluid');
 
-if (sessionStorage.getItem("userID" , null) === null){
+      // Add the 'animate' class to each image
+      images.forEach(function (image) {
+        image.classList.add('animate');
+      });
+    });
 
-let navbar = document.getElementById("navbar");
-navbar.innerHTML= `<a href="/index.html"> <img src="../assets/images/logo.png"  alt=""  style="width: 3rem; height: 3rem; margin-right: 5rem;  "></a>
+    if (sessionStorage.getItem("userID", null) === null) {
+
+      let navbar = document.getElementById("navbar");
+      navbar.innerHTML = `<a href="/index.html"> <img src="../assets/images/logo.png"  alt=""  style="width: 3rem; height: 3rem; margin-right: 5rem;  "></a>
 
 <div class="logo-container" style="font-size: x-large; text-align:start; color: #ffffff; margin-top:-10px; margin-left: -60px; text-shadow: 1px 4px 4px #b43feb !important">
   <h1 id="logo" ></h1>
@@ -261,15 +259,8 @@ navbar.innerHTML= `<a href="/index.html"> <img src="../assets/images/logo.png"  
 </div>
                <button type="button" id="search-button" class="btn" onclick="window.location.href='login.html'" style= "background-color:#B43FEB ; color: white ; border-radius: 24px; border-color: #B43FEB; margin-left : 10px ">Login</button>
                 `;
-                }
-</script>
-
-
-
-
-
-
-
-
+    }
+  </script>
 </body>
+
 </html>

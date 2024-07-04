@@ -1,40 +1,69 @@
 /********************hero section*********************/
+@font-face {
+    font-family: 'BankaiDemoVersion';
+    src: url('/fonts/BankaiDemoVersion.otf') format('opentype');
+}
+
 body{
+    font-family: 'BankaiDemoVersion', sans-serif;
     background-color: #000;
     color: aliceblue;
 }
-#hero-section {
-    background: url('../images/Image.png') no-repeat center center;
-    background-size: cover;
-    color: white;
-    padding: 20px;
+
+.container-slide {
+    max-width: 100vw;
+  }
+  
+  .carousel-item {
+    width: 100%;
+  }
+  
+  .carousel-item img {
+    width: 100%; /* يجعل الصور تمتد على عرض الشريحة بالكامل */
+    height: 100%; /* يحافظ على نسبة الارتفاع الأصلية للصورة */
+    object-fit: contain; /* يحافظ على تغطية الصورة للمساحة المحددة داخل الشريحة */
+  }
+  
+  .cardHome {
+    width: 15rem;
     height: 20rem;
-    margin-top: 3rem;
-    margin-left: 2%;
-}
-.custom-button {
-    background-color: #B43FEB;
-    border-color: #B43FEB;
-    color: white;
-    margin-top: 3rem;
-    margin-left: 3rem;
-    font-size: 1rem;
-    padding: 10px 20px;
-    font-weight: bold;
-    border-radius: 2rem;
-    
-}
-.WelcomeMess{
-    margin-top: 7rem;
-    margin-left: 3rem;
-    font-size: 30px;
-}
-
-.custom-button:hover {
-    background-color: #b789ce;
-}
-
-/********************\hero section*********************/
+    border-radius: 0.25rem;
+    transition: transform 0.5s ease;
+  }
+  
+  .cardHome:hover {
+    size: 1.1em;
+    transform: scale(1.1);
+    box-shadow: 3px 6px 14px #b53feb77;}
+  
+  .card-img-top1 {
+    height: 80%;
+    width: 100%;
+  }
+  
+  .card-text {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+  
+  .cardHome {
+    transition: transform 2s ease-in-out; /* تحريك مستمر لمدة 2 ثانية */
+    animation: pulse 5s infinite; /* حركة تكرارية لمدة 5 ثوانٍ */
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1); /* الحجم الأصلي */
+    }
+    50% {
+      transform: scale(1.1); /* تكبير بنسبة 10% */
+    }
+    100% {
+      transform: scale(1); /* الحجم الأصلي */
+    }
+  }
+/********************\hero section and cards*********************/
 
 /********************coming soon*********************/
 #Coming-Soon{
@@ -50,6 +79,8 @@ body{
     max-width: 1200px;
     width: 85%;
     height: 30%;
+   
+
 }
   
 .slider-wrapper {
@@ -166,7 +197,7 @@ body{
 /**************************Top Movies*********************** */
 .title-topMovies{
  margin-top: 3rem;
-margin-bottom: 3rem;
+ margin-bottom: 3rem;
     
 }
 .collection {
@@ -174,7 +205,7 @@ margin-bottom: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 4rem;
+
 }
 
 .content {
@@ -183,18 +214,17 @@ margin-bottom: 3rem;
 
 .collection .content {
     height: 18rem;
-    width: 20rem;
+    width: 18rem;
     border: .2rem solid rgba(255,255,255,.1);
-    border-radius: .7rem;
-    border-bottom: .4rem solid #b43feb;
-    border-top: .4rem solid #b43feb;
+    border-radius: .2rem;
+
     overflow: hidden;
 }
 
 .content img {
     width: 100%;
-    border-bottom-left-radius: .6rem;
-    border-bottom-right-radius: .6rem;
+
+  
 }
 
 .text-content {
@@ -229,8 +259,8 @@ margin-bottom: 3rem;
     text-align: center;
 }
 .card-img-top{
-    height: 5rem;
-    width: 5rem;
+    height: 3rem;
+    width: 3rem;
 }
 
   
@@ -241,16 +271,10 @@ margin-bottom: 3rem;
 /*************************\Why Watch Movies Here*********************** */
 
 /****************** response ********************/
-@media only screen and (max-width: 1023px) {
+/* @media only screen and (max-width: 1023px) {
      
     
-    #hero-section {
-     
-        padding: 10px;
-        height: 20rem;
-        margin-top: 5rem;
-        margin-left: 5rem;
-    }
+   
     .layout-container {
         flex-direction: column;
     }
@@ -349,4 +373,4 @@ margin-bottom: 3rem;
     .slider-scrollbar .scrollbar-thumb {
         width: 20%;
     }
-}
+} */

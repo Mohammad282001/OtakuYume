@@ -1,196 +1,182 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Browse Anime</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha512-..." crossorigin="anonymous" />
-  <link rel="stylesheet" href="/assets/styles/sidebar-nav.css" />
-  <link rel="stylesheet" href="/assets/styles/topratedpage.css" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
   <style>
-    .form-select {
-      padding: 0.8rem 1rem;
-
-      background-color: #000;
-      color: #b43feb;
-      border: 2px solid #b43feb;
-      border-radius: 8px;
-      font-size: 1rem;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      background-image: url('data:image/svg+xml;utf8,<svg fill="%23B43FEB" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
-      background-repeat: no-repeat;
-      background-position-x: 95%;
-      background-position-y: center;
-      cursor: pointer;
-      transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    .custom-input-group {
+      background-color: rgb(33, 37, 41);
+      border-color: rgb(33, 37, 41);
+      box-shadow: 1px 1px 5px #B43FEB;
+      color: white;
     }
 
-    .form-select:focus {
-      outline: none;
-      box-shadow: 0 0 10px #b43feb;
-    }
-
-    .form-select option {
-      background-color: #000;
-      color: #b43feb;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    .form-select option:hover {
-      background-color: #b43feb;
-      color: #cc3535;
-    }
-
-    .search-container {
-      position: relative;
-      width: 100%;
-      max-width: 600px;
-    }
-
-    .search-box {
-      width: 100%;
-      padding: 15px 50px 15px 20px;
-      border-radius: 50px;
-      border: none;
-      background: #1c1c1c;
-      color: #ffffff;
-      font-size: 18px;
-      box-shadow: 0 0 15px rgba(180, 63, 235, 0.5);
-    }
-
-    .search-box:focus {
-      outline: none;
-      box-shadow: 0 0 25px rgba(180, 63, 235, 0.7);
-    }
-
-    .search-button {
-      position: absolute;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
+    .custom-input-group .input-group-text {
+      background-color: rgb(33, 37, 41);
       color: #B43FEB;
-      font-size: 22px;
+      box-shadow: 1px 1px 5px #B43FEB;
+    }
+
+    .custom-select {
+      border-color: #B43FEB;
+      background-color: rgb(33, 37, 41);
+      color: #B43FEB;
+    }
+
+    .pages {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .pages button {
+      background-color: #b43feb;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 0 5px;
+      border-radius: 5px;
       cursor: pointer;
+      transition: background-color 0.3s;
     }
 
-    .search-button:hover {
-      color: #ffffff;
+    .pages button:hover {
+      background-color: #9b2dc6;
     }
 
-    .search-button:focus {
-      outline: none;
+    @media (max-width: 575.98px) {
+
+      .input-group,
+      .select-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .input-group .form-control,
+      .select-container .form-select {
+        margin-bottom: 10px;
+      }
     }
 
-    .search-icon {
-      font-size: 28px;
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      .input-group {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .select-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .input-group .form-control,
+      .select-container .form-select {
+        margin-bottom: 10px;
+      }
     }
-    #loading-spinner {
-  display: none;
-  width: 100%;
-  text-align: center;
-  margin-top: 2rem;
-}
 
-#loading-spinner img {
-  width: 100px;
-  height: 100px;
-  animation: spin 2s linear infinite;
-}
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      .input-group {
+        width: 100%;
+        max-width: 45rem;
+      }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
+      .select-container {
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: row;
+      }
+    }
 
+    @media (min-width: 992px) {
+      .input-group {
+        width: 100%;
+        max-width: 50rem;
+      }
+
+      .select-container {
+        justify-content: space-evenly;
+        flex-direction: row;
+      }
+    }
   </style>
 </head>
 
-<body>
-  <!-- navbar -->
-  <div class="navbar">
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-black" id="navbar">
-    
-
-      <a href="/index.html"> <img src="../assets/images/logo.png"  alt=""  style="width: 3rem; height: 3rem; margin-right: 5rem;  "></a>
-  
-      <div class="logo-container" style="font-size: x-large; text-align:start; color: #ffffff; margin-top:-10px; margin-left: -60px; text-shadow: 1px 4px 4px #b43feb !important">
-        <h1 id="logo" ></h1>
-        OtakuYume
-      </div>
-       
-     </nav>
-    <div class="menu-container">
-      <ul class="ulNavbar"></ul>
-      <li class="liNavbar active">
-        <a href="http://127.0.0.1:5501/index.html" style="text-decoration: none">Home</a>
-      </li>
-      <li class="liNavbar">
-        <a href="http://127.0.0.1:5502/pages/topratedpage.html" style="text-decoration: none">Movies</a>
-      </li>
-      <li class="liNavbar">Series</li>
-    </div>
-    <!-- searchbar -->
-    <div class="searchbar">
-      <input id="search-input" type="text" placeholder="Search ..." />
-      <button id="search-button">Search</button>
-    </div>
-    <!-- ................... -->
-    <!-- <div class="profile-container">
-      <div class="search-icon">
-        <span class="fas fa-search"> </span>
-      </div>
-      <div>
-        <img id="user-picture" src="/assets/images/user.png" alt="" />
-        <i class="fas fa-caret-down"></i>
-      </div>
-    </div> -->
-
-  </div>
-
-  <!-- sidebar -->
-  <main style="display: grid; grid-template-columns: 15% 85%;">
-    <section>
-      <div class="sidebar" id="sidebar"></div>
-    </section>
-
-    <!-- container -->
-
-    <div class="Browse Anime">
-      <div style="display: flex;margin-top: 
-      5rem ;margin-bottom: 3rem;
-      align-items: center;
-      gap:2rem;
-      ">
-        <div class="search-container">
-          <input type="text" class="search-box" placeholder="Search for anime..." id="searchBox">
-          <button class="search-button" id="search-button-id">
-            <i class="search-icon">🔍</i>
-          </button>
+<body style="background-color: black;">
+  <!-------------------------------------------------- Header --------------------------------------------------------->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid" style="margin-left: 2rem;">
+        <a class="navbar-brand" href="#">
+          <img src="logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+        </a>
+        <a class="navbar-brand" href="#" style="color: #B43FEB;">OtakuYume</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#" style="color: white;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: white;">Browse Anime</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#" style="color: white;">Contact us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#" style="color: white;">About us</a>
+            </li>
+          </ul>
+          <form style="margin-right: 2rem;">
+            <button id="logout" class="btn " type="submit"
+              style="color:white; border-color: #B43FEB; background-color: #B43FEB;">Logout</button>
+          </form>
         </div>
+      </div>
+    </nav>
+  </header>
+  <!----------------------------------------------- End Header --------------------------------------------------------->
 
+  <!----------------------------------------------- Main --------------------------------------------------------->
+  <main style="margin-top: 3rem;">
+    <!---------------Search Section----------------->
+    <section class="d-flex justify-content-around flex-wrap">
+      <div class="input-group rounded custom-input-group mb-3" style="width: 30rem;">
+        <input id="searchBox" type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+          aria-describedby="search-addon" style="height:2.5rem;" />
+      </div>
+      <!---------------dropdown Section----------------->
+      <div class="d-flex gap-1 select-container">
         <div>
-
-          <select id="anitype" class="form-select" aria-label="Default select example">
+          <select id="sortBy" class="form-select custom-select mb-3">
+            <option value="true">Top Rated</option>
+            <option value="false">Popularity</option>
+            <option value="false">Title</option>
+          </select>
+        </div>
+        <div>
+          <select id="anitype" class="form-select custom-select mb-3">
             <option value="">All</option>
             <option value="tv">TV</option>
             <option value="movie">Movie</option>
             <option value="ova">OVA</option>
             <option value="special">Special</option>
           </select>
-
-
-          <select id="ageRating" class="form-select" aria-label="Default select example">
+        </div>
+        <div>
+          <select id="ageRating" class="form-select custom-select mb-3">
             <option value="">All</option>
             <option value="g">G - All Ages</option>
             <option value="pg">PG - Children</option>
@@ -199,25 +185,53 @@
           </select>
         </div>
       </div>
+    </section>
+    <!-- loading  -->
+    <div id="loading-text" style="text-align: center; margin-top: 20px;"></div>
 
-      <div class="movie-grid-browser">
-        <section id="main-section" class="browse-section"></section>
-        <div id="loading-spinner" style="display: none;">
-          <div id="loading-spinner">
-            <img src="https://media0.giphy.com/media/mhVkgCAqwc61BE2PFa/giphy.gif?cid=6c09b952axozmlmiczw7arkkfgz16n64bmsw1u8w218neoud&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s" alt="Loading...">
-          </div>
 
-          <img src="https://media0.giphy.com/media/mhVkgCAqwc61BE2PFa/giphy.gif?cid=6c09b952axozmlmiczw7arkkfgz16n64bmsw1u8w218neoud&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s" alt="Loading...">
+    <!---------------Cards Section----------------->
+
+    <section style="margin-top: 3rem;" id="displayAnime">
+      <div class="container text-center">
+        <div id="container-inner" class="row" style="gap: 1rem;">
+          <!-- Cards will be dynamically added here -->
         </div>
-
-
-        </section>
       </div>
+    </section>
+
+    <section id="pagination-section" style="margin-bottom: 3rem;">
+      <div class="pages" id="pages">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+      </div>
+    </section>
   </main>
+    <footer class="text-center text-white py-3 mt-auto" style="box-shadow: 1px 1px 1px #000000">
+      <div class="container">
+        <!-- Social media icons -->
+        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-facebook-f"></i></a>
+        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-twitter"></i></a>
+        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-google"></i></a>
+        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-instagram"></i></a>
+        <!-- Copyright notice -->
+        <div style="color: whitesmoke">© 2024 OkatuYume.com</div>
+      </div>
+    </footer>
 
-
-  <script src="../assets/scripts/sidebar.js"></script>
-  <script src="../assets/scripts/Browse Anime.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="/assets/scripts/Browse Anime.js"></script>
 </body>
 
 </html>
