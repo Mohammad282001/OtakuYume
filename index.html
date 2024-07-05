@@ -1,160 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <!-- Bootstrap Icons CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <title>Home</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="./assets/styles/home.css" />
-  <style>
-  </style>
-</head>
+    <!-- Font Awesome 6 CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
 
-<body>
-  <!--------------------------------header--------------------------------------->
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-  <header>
-    <nav class="navbar navbar-expand-lg bg-darck">
-      <div class="container-fluid" style="    margin-left: 2rem;
-    margin-right: 2rem;
-    display: contents;">
-        <a class="navbar-brand" href="#">
-          <img src="assets/images/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top" />
-        </a>
-        <a class="navbar-brand" href="#" style="color: #b43feb">OtakuYume</a>
-        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button> -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#" style="color: white">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="color: white">Browse Anime</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="color: white">Contact us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="color: white">About us</a>
-            </li>
-          </ul>
-          <form style="margin-left: 9rem">
-            <button id="logout" class="btn" type="submit" style="
-                  color: #b43deb;
-                  border: none;
-                  font-weight: 600;
-                  margin-left: 40rem;
-                ">
-              <i class="bi bi-door-open-fill" style="color: #b43deb"></i>
-              Logout
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <!--------------------------------end header--------------------------------------->
-  <!--------------------------------------body----------------------------------->
+    <!-- Bootstrap Icons CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-  <main>
-    <!-----------------------hero-section--------------------------->
-    <section class="container-slide">
-      <div class="content-container">
-        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-          <div class="carousel-indicators" style="justify-content: flex-start; size: 4rem">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-              aria-label="Slide 3"></button>
-          </div>
+    <!-- Font Awesome 5.15.4 CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
 
-          <div class="carousel-inner" style="height: 30rem">
-            <div class="carousel-item active" data-bs-interval="3000">
-              <img src="assets/images/slide_12.png" class="d-block w-100" alt="..." />
-              <div class="carousel-caption d-none d-md-block" style="width: 35%; right: unset; top: 15%; left: 7rem">
-                <h3 style="font-weight: 900; margin-bottom: 1.25rem">
-                  CONAN DETECTIVE
-                </h3>
-                <p>
-                  Case Closed, also known as Detective Conan, is a Japanese
-                  detective manga series written and illustrated by Gosho
-                  Aoyama. It has been serialized in Shogakukan's shōnen manga
-                  magazine Weekly Shōnen Sunday since January 1994, with its
-                  chapters collected in 105 tankōbon volumes as of April 2024.
-                </p>
-              </div>
-            </div>
+    <link rel="stylesheet" href="./assets/styles/home.css" />
+    <style></style>
+  </head>
 
-            <div class="carousel-item" data-bs-interval="3000">
-              <img src="assets/images/slide_6.jpg" class="d-block w-100" alt="..." />
-              <div class="carousel-caption d-none d-md-block" style="width: 30%; right: unset; top: 10%; left: 5rem">
-                <h3 style="font-weight: 900; margin-bottom: 1rem">
-                  SATORU GOJO
-                </h3>
-                <p>
-                  Satoru Gojo is a fictional character from Gege Akutami's
-                  manga Jujutsu Kaisen. He was first introduced in Akutami's
-                  short series Tokyo Metropolitan Curse Technical School as
-                  the mentor of the cursed teenager Yuta Okkotsu at Tokyo
-                  Prefectural Jujutsu High School.
-                </p>
-              </div>
-            </div>
+  <body>
+    <!--------------------------------header--------------------------------------->
 
-            <div class="carousel-item" data-bs-interval="3000">
-              <img src="assets/images/slide_5.gif" class="d-block w-100" alt="..." />
-              <div class="carousel-caption d-none d-md-block" style="width: 40%; right: unset; top: 8%; left: 50rem">
-                <h3 style="font-weight: 900; margin-bottom: 1rem">
-                  DRAGON BALL
-                </h3>
-                <p style="font-size: 1.5rem">
-                  Dragon Ball is a Japanese media franchise created by Akira
-                  Toriyama in 1984. The initial manga, written and illustrated
-                  by Toriyama, was serialized in Weekly Shōnen Jump from 1984
-                  to 1995, with the 519 individual chapters collected in 42
-                  tankōbon volumes by its publisher Shueisha.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- أزرار التحكم بالكاروسيل -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev"
+    <header>
+      <nav class="navbar navbar-expand-lg" style="background-color: #000">
+        <div class="container-fluid">
+          <button
             style="
+              color: white;
+              font-size: 1rem;
+              box-shadow: 1px 1px 1px #b43deb;
+              order: 2;
+            "
+            class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list" style="color: #b43deb"></i>
+          </button>
+
+          <a
+            class="navbar-brand me-auto"
+            href="http://127.0.0.1:5502/index.html?#"
+          >
+            <img
+              src="assets/images/logo.png"
+              alt="Logo"
+              width="50"
+              height="50"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <a
+            class="navbar-brand"
+            href="http://127.0.0.1:5502/index.html?#"
+            style="color: #b43feb; margin-top: 0.45rem"
+            >OtakuYume</a
+          >
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul
+              class="navbar-nav me-auto mb-2 mb-lg-0"
+              style="
+                align-items: center;
+                font-size: 1.25rem;
+                margin-top: 0.45rem;
+              "
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="http://127.0.0.1:5502/index.html?#"
+                  style="color: white; margin-right: 20px"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="http://127.0.0.1:5502/pages/Browse%20Anime.html"
+                  style="color: white; margin-right: 20px"
+                  >Browse Anime</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="http://127.0.0.1:5502/pages/contactUs.html"
+                  style="color: white; margin-right: 20px"
+                  >Contact us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="http://127.0.0.1:5502/pages/aboutUs.html"
+                  style="color: white; margin-right: 20px"
+                  >About us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <form class="d-flex" role="search">
+              <button
+                id="logout"
+                class="btn"
+                type="submit"
+                style="color: #b43deb; border: none; font-weight: 600"
+              >
+                <a
+                  class="nav-link"
+                  href="http://127.0.0.1:5502/pages/login.html"
+                  style="color: #b43deb"
+                >
+                  <i class="bi bi-door-open-fill" style="color: #b43deb"></i
+                  >Logout</a
+                >
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--------------------------------end header--------------------------------------->
+    <!--------------------------------------body----------------------------------->
+
+    <main>
+      <!-----------------------hero-section--------------------------->
+      <section class="container-slide">
+        <div class="content-container">
+          <div
+            id="carouselExampleDark"
+            class="carousel carousel-dark slide"
+            data-bs-ride="carousel"
+          >
+            <div
+              class="carousel-indicators"
+              style="justify-content: flex-start; size: 4rem"
+            >
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+
+            <div class="carousel-inner" style="height: 30rem">
+              <div class="carousel-item active" data-bs-interval="3000">
+                <img
+                  src="assets/images/slide_12.png"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div
+                  class="carousel-caption d-none d-md-block"
+                  style="width: 35%; right: unset; top: 12%; left: 8rem"
+                >
+                  <h3
+                    style="
+                      font-weight: 900;
+                      margin-bottom: 1.25rem;
+                      font-size: 2.4rem;
+                    "
+                  >
+                    CONAN DETECTIVE
+                  </h3>
+                  <p
+                    style="
+                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana,
+                        sans-serif;
+                      font-size: 1.05rem;
+                    "
+                  >
+                    Case Closed, also known as Detective Conan, is a Japanese
+                    detective manga series written and illustrated by Gosho
+                    Aoyama. It has been serialized in Shogakukan's shōnen manga
+                    magazine Weekly Shōnen Sunday since January 1994, with its
+                    chapters collected in 105 tankōbon volumes as of April 2024.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item" data-bs-interval="3000">
+                <img
+                  src="assets/images/slide_6.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div
+                  class="carousel-caption d-none d-md-block"
+                  style="width: 30%; right: unset; top: 10%; left: 5rem"
+                >
+                  <h3
+                    style="
+                      font-weight: 900;
+                      margin-bottom: 1rem;
+                      font-size: 2.4rem;
+                    "
+                  >
+                    SATORU GOJO
+                  </h3>
+                  <p
+                    style="
+                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana,
+                        sans-serif;
+                      font-size: 1.05rem;
+                    "
+                  >
+                    Satoru Gojo is a fictional character from Gege Akutami's
+                    manga Jujutsu Kaisen. He was first introduced in Akutami's
+                    short series Tokyo Metropolitan Curse Technical School as
+                    the mentor of the cursed teenager Yuta Okkotsu at Tokyo
+                    Prefectural Jujutsu High School.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item" data-bs-interval="3000">
+                <img
+                  src="assets/images/slide_5.gif"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div
+                  class="carousel-caption d-none d-md-block"
+                  style="width: 40%; right: unset; top: 15%; left: 50rem"
+                >
+                  <h3
+                    style="
+                      font-weight: 900;
+                      margin-bottom: 1rem;
+                      font-size: 2.4rem;
+                    "
+                  >
+                    DRAGON BALL
+                  </h3>
+                  <p
+                    style="
+                      font-family: 'Segoe UI', Tahoma, Geneva, Verdana,
+                        sans-serif;
+                      font-size: 1.05rem;
+                    "
+                  >
+                    Dragon Ball is a Japanese media franchise created by Akira
+                    Toriyama in 1984. The initial manga, written and illustrated
+                    by Toriyama, was serialized in Weekly Shōnen Jump from 1984
+                    to 1995, with the 519 individual chapters collected in 42
+                    tankōbon volumes by its publisher Shueisha.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- أزرار التحكم بالكاروسيل -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide="prev"
+              style="
                 border: none;
                 color: #ffffff;
                 background-color: rgba(0, 0, 0, 0.001);
-              ">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next"
-            style="
+              "
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden"></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide="next"
+              style="
                 border: none;
                 color: rgb(255, 255, 255);
                 background-color: rgba(0, 0, 0, 0.001);
-              ">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden"></span>
-          </button>
+              "
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden"></span>
+            </button>
+          </div>
         </div>
-      </div>
-      <!-----------------------\hero-section--------------------------->
-      <!----------------------------------Top Picks----------------------------------->
-      <div class="container text-center">
-        <h3 class="title-topMovies">Top Picks For You</h3>
-        <div class="row" id="cards" style="margin-top: 4rem">
-          <!-- <div class="col">
+        <!-----------------------\hero-section--------------------------->
+        <!----------------------------------Top Picks----------------------------------->
+        <div class="container text-center">
+          <h3
+            class="title-topMovies"
+            style="font-size: 2.4rem; margin-top: 6rem"
+          >
+            Top Picks For You
+          </h3>
+          <div
+            class="row"
+            id="cards"
+            style="
+              margin-top: 4rem;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              font-size: 1.1rem;
+            "
+          >
+            <!-- <div class="col">
                       <div class="cardHome">
                         <img src="./assets/images/Card Film.png" class="card-img-top1" alt="..." />
                         <div class="card-body">
@@ -162,35 +354,51 @@
                         </div>
                       </div>
                     </div> -->
+          </div>
+        </div>
+        <!---------------------------------Top Picks------------------------------------>
+      </section>
+
+      <!-----------------------Top-Movies--------------------------->
+      <div
+        class="container-fluid"
+        style="padding-left: 3rem; padding-right: 3rem"
+      >
+        <div class="content-containar">
+          <h3
+            class="text-center title-topMovies"
+            style="font-size: 2.4rem; margin-top: 6rem"
+          >
+            Top 10 Movies
+          </h3>
+          <section class="Top-Movies collection">
+            <div class="swiper mySwiper">
+              <div id="swiper-wrapper" class="swiper-wrapper"></div>
+            </div>
+          </section>
         </div>
       </div>
-      <!---------------------------------Top Picks------------------------------------>
-    </section>
+      <!-----------------------\Top-Movies--------------------------->
+      <!-----------------------Coming-Soon--------------------------->
 
-    <!-----------------------Top-Movies--------------------------->
-    <div class="container-fluid" style="padding-left: 3rem; padding-right: 3rem">
-      <div class="content-containar">
-        <h3 class="text-center title-topMovies">Top 10 Movies</h3>
-        <section class="Top-Movies collection">
-          <div class="swiper mySwiper">
-            <div id="swiper-wrapper" class="swiper-wrapper"></div>
-          </div>
-        </section>
-      </div>
-    </div>
-    <!-----------------------\Top-Movies--------------------------->
-    <!-----------------------Coming-Soon--------------------------->
+      <section id="Coming-Soon">
+        <h3
+          class="text-center title-topMovies"
+          style="font-size: 2.4rem; margin-top: 6rem"
+        >
+          Coming Soon
+        </h3>
 
-    <section id="Coming-Soon">
-      <h3 class="text-center title-topMovies">Coming Soon</h3>
-
-      <div class="container">
-        <div class="slider-wrapper">
-          <button id="prev-slide" class="slide-button material-symbols-rounded">
-            <i class="fa-solid fa-arrow-left row1"></i>
-          </button>
-          <ul class="image-list" id="image-list">
-            <!-- <img class="image-item" src="./assets/images/Card Film.png" alt="img-1" />
+        <div class="container">
+          <div class="slider-wrapper">
+            <button
+              id="prev-slide"
+              class="slide-button material-symbols-rounded"
+            >
+              <i class="fa-solid fa-arrow-left row1"></i>
+            </button>
+            <ul class="image-list" id="image-list">
+              <!-- <img class="image-item" src="./assets/images/Card Film.png" alt="img-1" />
                     <img class="image-item" src="./assets/images/Image (1).png" alt="img-2" />
                     <img class="image-item" src="./assets/images/Image.png" alt="img-3" />
                     <img class="image-item" src="./assets/images/Card Film.png" alt="img-4" />
@@ -200,89 +408,139 @@
                     <img class="image-item" src="./assets/images/Image (1).png" alt="img-8" />
                     <img class="image-item" src="./assets/images/Image.png" alt="img-9" />
                     <img class="image-item" src="./assets/images/Card Film.png" alt="img-10" /> -->
-          </ul>
-          <button id="next-slide" class="slide-button material-symbols-rounded">
-            <i class="fa-solid fa-arrow-right row1"></i>
-          </button>
-        </div>
-        <div class="slider-scrollbar">
-          <div class="scrollbar-track">
-            <div class="scrollbar-thumb"></div>
+            </ul>
+            <button
+              id="next-slide"
+              class="slide-button material-symbols-rounded"
+            >
+              <i class="fa-solid fa-arrow-right row1"></i>
+            </button>
+          </div>
+          <div class="slider-scrollbar">
+            <div class="scrollbar-track">
+              <div class="scrollbar-thumb"></div>
+            </div>
           </div>
         </div>
+      </section>
+      <!-----------------------\Coming-Soon--------------------------->
+      <!-----------------------Why Watch Movies Here?--------------------------->
+
+      <section id="Watch-Movies">
+        <h3
+          class="text-center title-topMovies"
+          style="font-size: 2.4rem; margin-top: 6rem"
+        >
+          Why Watch Movies Here?
+        </h3>
+
+        <div class="container mb-5 text-center" style="text-align: center">
+          <div class="card-deck">
+            <div class="card">
+              <div class="image-container">
+                <img
+                  class="card-img-top"
+                  src="./assets/images/viduo.png"
+                  alt="Card image cap"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Latest Releases</h5>
+                <p
+                  class="card-text"
+                  style="
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 1.05rem;
+                    text-align-last: center;
+                  "
+                >
+                  Stay updated with the newest films and series
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="image-container">
+                <img
+                  class="card-img-top"
+                  src="./assets/images/reviews-removebg-preview 1.png"
+                  alt="Card image cap"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">User Reviews</h5>
+                <p
+                  class="card-text"
+                  style="
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 1.05rem;
+                    text-align-last: center;
+                  "
+                >
+                  Read authentic reviews from fellow movie enthusiasts
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="image-container">
+                <img
+                  class="card-img-top"
+                  src="./assets/images/top.png"
+                  alt="Card image cap"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Top Rated</h5>
+                <p
+                  class="card-text"
+                  style="
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 1.05rem;
+                    text-align-last: center;
+                  "
+                >
+                  Discover highly acclaimed movies curated by experts
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-----------------------\Why Watch Movies Here?--------------------------->
+    </main>
+
+    <!--------------------------------------end body----------------------------------->
+
+    <!-----------------------------footer----------------------->
+    <footer
+      class="text-center text-white py-3 mt-auto"
+      style="box-shadow: 1px 1px 1px #000000"
+    >
+      <div class="container">
+        <!-- Social media icons -->
+        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"
+          ><i class="fab fa-google"></i
+        ></a>
+        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <!-- Copyright notice -->
+        <div style="color: whitesmoke">© 2024 OkatuYume.com</div>
       </div>
-    </section>
-    <!-----------------------\Coming-Soon--------------------------->
-    <!-----------------------Why Watch Movies Here?--------------------------->
+    </footer>
+    <!-------------------------------->
 
-    <section id="Watch-Movies">
-      <h3 class="text-center title-topMovies">Why Watch Movies Here?</h3>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/scripts/home.js"></script>
 
-      <div class="container mb-5 text-center" style="text-align: center">
-        <div class="card-deck">
-          <div class="card">
-            <div class="image-container">
-              <img class="card-img-top" src="./assets/images/Screenshot_2024-06-28_000418-removebg-preview 1.png"
-                alt="Card image cap" />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Latest Releases</h5>
-              <p class="card-text">
-                Stay updated with the newest films and series
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="image-container">
-              <img class="card-img-top" src="./assets/images/reviews-removebg-preview 1.png" alt="Card image cap" />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">User Reviews</h5>
-              <p class="card-text">
-                Read authentic reviews from fellow movie enthusiasts
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="image-container">
-              <img class="card-img-top" src="./assets/images/rating-removebg-preview 1.png" alt="Card image cap" />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Top Rated</h5>
-              <p class="card-text">
-                Discover highly acclaimed movies curated by experts
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-----------------------\Why Watch Movies Here?--------------------------->
-  </main>
-
-  <!--------------------------------------end body----------------------------------->
-
-  <!-----------------------------footer----------------------->
-  <footer class="text-center text-white py-3 mt-auto" style="box-shadow: 1px 1px 1px #000000">
-    <div class="container">
-      <!-- Social media icons -->
-      <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-facebook-f"></i></a>
-      <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-twitter"></i></a>
-      <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-google"></i></a>
-      <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-instagram"></i></a>
-      <!-- Copyright notice -->
-      <div style="color: whitesmoke">© 2024 OkatuYume.com</div>
-    </div>
-  </footer>
-  <!-------------------------------->
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="./assets/scripts/home.js"></script>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>
