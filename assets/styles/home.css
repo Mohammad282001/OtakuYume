@@ -19,9 +19,9 @@ body{
   }
   
   .carousel-item img {
-    width: 100%; /* يجعل الصور تمتد على عرض الشريحة بالكامل */
-    height: 100%; /* يحافظ على نسبة الارتفاع الأصلية للصورة */
-    object-fit: contain; /* يحافظ على تغطية الصورة للمساحة المحددة داخل الشريحة */
+    width: 100%;
+    height: 100%; 
+    object-fit: contain; 
   }
   
   .cardHome {
