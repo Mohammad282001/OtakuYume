@@ -7,7 +7,7 @@ body {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  box-shadow: 5px 5px 5px #b43feb; /* Subtle shadow */
+  box-shadow: 2px 2px 2px #b43feb; /* Subtle shadow */
   animation: bounce-in 2s ease infinite alternate; /* تطبيق الحركة */
 }
 

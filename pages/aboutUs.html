@@ -15,6 +15,10 @@
 
 </head>
 <style>
+  @font-face {
+    font-family: 'BankaiDemoVersion';
+    src: url('/fonts/BankaiDemoVersion.otf') format('opentype');
+}
   nav {
     position: fixed;
   }
@@ -24,38 +28,110 @@
   <!--------------------------------header--------------------------------------->
 
   <header>
-    <nav class="navbar navbar-expand-lg bg-darck ">
-      <div class="container-fluid" style="margin-left: 2rem;">
-        <a class="navbar-brand" href="#">
-          <img src="../assets/images/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
-        </a>
-        <a class="navbar-brand" href="#" style="color: #B43FEB;">OtakuYume</a>
-        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button> -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#" style="color: white;">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="color: white;">Browse Anime</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="#" style="color: white;">Contact us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="#" style="color: white;">About us</a>
-            </li>
-          </ul>
-          <form style="margin-left: 45rem;">
-            <button id="logout" class="btn " type="submit"
-              style="color:white; border-color: #B43FEB; background-color: #B43FEB;">Logout</button>
-          </form>
-        </div>
-      </div>
-    </nav>
+         <nav class="navbar navbar-expand-lg" style="background-color: #000;  font-family: 'BankaiDemoVersion';">
+        <div class="container-fluid">
+          <button
+            style="
+              color: white;
+              font-size: 1rem;
+              box-shadow: 1px 1px 1px #b43deb;
+              order: 2;
+            "
+            class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list" style="color: #b43deb"></i>
+          </button>
 
+          <a
+            class="navbar-brand me-auto"
+            href="http://127.0.0.1:5502/index.html?#"
+          >
+            <img
+              src="../assets/images/logo.png"
+              alt="Logo"
+              width="50"
+              height="50"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <a
+            class="navbar-brand"
+            href="http://127.0.0.1:5502/index.html?#"
+            style="color: #b43feb; margin-top: 0.45rem"
+            >OtakuYume</a
+          >
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03"  style=" justify-content: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana,
+                        sans-serif;">
+            <ul
+              class="navbar-nav me-auto mb-2 mb-lg-0"
+              style="
+                align-items: center;
+                font-size: 1rem;
+                margin-top: 0.45rem;
+              "
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="http://127.0.0.1:5502/index.html?#"
+                  style="color: white; margin-right: 20px"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="http://127.0.0.1:5502/pages/Browse%20Anime.html"
+                  style="color: white; margin-right: 20px"
+                  >Browse Anime</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="http://127.0.0.1:5502/pages/contactUs.html"
+                  style="color: white; margin-right: 20px"
+                  >Contact us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="http://127.0.0.1:5502/pages/aboutUs.html"
+                  style="color: #b43feb; margin-right: 20px"
+                  >About us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <form class="d-flex" role="search">
+              <button
+                id="logout"
+                class="btn"
+                type="submit"
+                style="color: #b43deb; border: none; font-weight: 600"
+              >
+                <a
+                  class="nav-link"
+                  href="http://127.0.0.1:5502/pages/login.html"
+                  style="color: #b43deb"
+                >
+                  <i class="bi bi-door-open-fill" style="color: #b43deb"></i
+                  >Logout</a
+                >
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
   </header>
   <!--------------------------------end header--------------------------------------->
 
@@ -68,10 +144,10 @@
 
         <!------------------------body----------------------------->
         <div class="container text-center profile-row mt-5"
-          style="border:0.1rem solid #b773d6; box-shadow:3px 3px 150px #b689cb;">
+          style="border:0.1rem solid #b773d6; box-shadow:3px 3px 70px #b689cb;">
           <div class="row align-items-center justify-content-center" style="width: 100%;">
             <div class="col-12" style="margin: 3rem;">
-              <h2 style="margin: 1rem 0;">Welcome to OTAKUYUME!</h2>
+              <h1 style="margin: 1rem 0;  font-family: 'BankaiDemoVersion';">Welcome to OTAKUYUME!</h1>
             </div>
           </div>
 
@@ -193,7 +269,7 @@
             <!------------------------------------------------------------->
             <div class="container" style="margin-bottom: 6rem;  width: 50rem; ">
               <hr style="background-color: #fff;margin-bottom: 3rem; margin-top: 3rem;">
-              <h3 style="margin: 2rem 0; font-weight: 900; "> OTAKUYUME!</h3>
+              <h2 style="margin: 2rem 0; font-weight: 200;  font-family: 'BankaiDemoVersion'; "> OTAKUYUME!</h2>
               <p>OTAKUYUME is your ultimate destination for all things anime. Whether you're discovering new series or
                 revisiting classics, we provide comprehensive information including ratings, descriptions, episode
                 counts, and more to guide your anime journey.</p>
@@ -218,7 +294,7 @@
 
 
   <!-- ================ footer ============= -->
-    <footer class="text-center text-white py-3 mt-auto" style="box-shadow: 1px 1px 1px #000000">
+    <footer class="text-center text-white py-3 mt-auto" style="box-shadow: 1px 1px 1px #000000;  font-family: 'BankaiDemoVersion';">
       <div class="container">
         <!-- Social media icons -->
         <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"><i class="fab fa-facebook-f"></i></a>

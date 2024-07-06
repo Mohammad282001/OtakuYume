@@ -10,14 +10,10 @@ body {
   background-color: #000000;
 }
 
-* {
-    margin: 0;
-  }
-  
  
   
 /* navbar */
-.navbar {
+/* .navbar {
     width: 100%;
     height: 50px;
     background-color: #0d0c0f;
@@ -104,7 +100,7 @@ body {
 
   #btnMenu{
     display: none;
-}
+} */
 
 @media (max-width : 888px) {
     .menu-container{
@@ -183,7 +179,7 @@ body {
   margin-right: 8px;
 }
 
-.dark-mode-toggle {
+/* .dark-mode-toggle {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -198,9 +194,9 @@ body {
   padding: 2px;
   z-index: 1000;
   transition: background-color 0.3s ease;
-}
+} */
 
-.dark-mode-toggle .toggle-button {
+/* .dark-mode-toggle .toggle-button {
   width: 16px;
   height: 16px;
   left: 5px;
@@ -212,7 +208,7 @@ body {
 
 .dark-mode-toggle.on .toggle-button {
   transform: translateX(16px);
-}
+} */
 
 /* Add specific style for the "Discovery" icon */
 .sidebar a .fa-cc-discover {
@@ -243,7 +239,7 @@ body {
 
 /* containar */
 .containar{
-  background-color: #0D0C0F;
+  background-color: #000000;
   color: #ffffff;
   padding: 5px;
   margin-left: 275px;
@@ -251,6 +247,13 @@ body {
   width: 100%;
 }
 
+#MovieDetiles{
+  color: #b43deb;
+}
+
+.fas.fa-info-circle {
+    color: #b43deb !important;
+}
 
 
 .comments-user {
