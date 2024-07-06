@@ -1,5 +1,5 @@
 const linksSidebar = [
-  { nameSidebar: "MENU", noHover: true },
+  // { nameSidebar: "MENU", noHover: true },
   { nameSidebar: "Home", url: "/index.html", iconSidebar: "fas fa-home" },
 
   {
@@ -7,11 +7,19 @@ const linksSidebar = [
     url: "/pages/Browse Anime.html",
     iconSidebar: "fas fa-filter",
   },
+  // {
+  //   nameSidebar: "Top Rated",
+  //   url: "/pages/topratedpage.html",
+  //   iconSidebar: "far fa-star",
+  // },
   {
-    nameSidebar: "Top Rated",
-    url: "/pages/topratedpage.html",
-    iconSidebar: "far fa-star",
+    nameSidebar: "Movie Detiles",
+    url: "#",
+    iconSidebar: "fas fa-info-circle",
+    id: "MovieDetiles",
+    style: "color: #b43deb;",
   },
+
   {
     nameSidebar: "About us",
     url: "/pages/aboutUs.html",

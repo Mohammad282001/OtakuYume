@@ -10,6 +10,10 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
  <!-- Link Swiper's CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
 <link rel="stylesheet" href="../assets/styles/contactUs.css">
 <link rel="stylesheet" href="../assets/styles/sidebar-nav.css">
@@ -59,11 +63,10 @@
     });
   </script>
 <style>
-  #navbar {
-      padding: 1rem;
-background-color:black;
-  }
-
+  @font-face {
+    font-family: 'BankaiDemoVersion';
+    src: url('/fonts/BankaiDemoVersion.otf') format('opentype');
+}
   #search-input {
       border-radius: 24px;
       padding: 0.5rem 1rem;
@@ -104,21 +107,114 @@ background-color:black;
 <body>
     <div class="container-fluid">
         <!---------------------header---------------------->
-        <nav class="navbar navbar-expand-lg navbar-light bg-black" id="navbar">
-    
+      <nav class="navbar navbar-expand-lg" style="background-color: #000; font-family: 'BankaiDemoVersion';">
+        <div class="container-fluid">
+          <button
+            style="
+              color: white;
+              font-size: 1rem;
+              box-shadow: 1px 1px 1px #b43deb;
+              order: 2;
+            "
+            class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list" style="color: #b43deb"></i>
+          </button>
 
-          <a href="/index.html"> <img src="../assets/images/logo.png"  alt=""  style="width: 3rem; height: 3rem; margin-right: 5rem;  "></a>
-      
-          <div class="logo-container" style="font-size: x-large; text-align:start; color: #ffffff; margin-top:-10px; margin-left: -60px; text-shadow: 1px 4px 4px #b43feb !important">
-            <h1 id="logo" ></h1>
-            OtakuYume
+          <a
+            class="navbar-brand me-auto"
+            href="http://127.0.0.1:5502/index.html?#"
+          >
+            <img
+              src="../assets/images/logo.png"
+              alt="Logo"
+              width="50"
+              height="50"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <a
+            class="navbar-brand"
+            href="http://127.0.0.1:5502/index.html?#"
+            style="color: #b43feb; margin-top: 0.45rem"
+            >OtakuYume</a
+          >
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03"  style=" justify-content: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana,
+                        sans-serif;">
+            <ul
+              class="navbar-nav me-auto mb-2 mb-lg-0"
+              style="
+                align-items: center;
+                font-size: 1rem;
+                margin-top: 0.45rem;
+              "
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="http://127.0.0.1:5502/index.html?#"
+                  style="color: white; margin-right: 20px"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="http://127.0.0.1:5502/pages/Browse%20Anime.html"
+                  style="color: white; margin-right: 20px"
+                  >Browse Anime</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="http://127.0.0.1:5502/pages/contactUs.html"
+                  style="color: #b43feb; margin-right: 20px"
+                  >Contact us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="http://127.0.0.1:5502/pages/aboutUs.html"
+                  style="color: white; margin-right: 20px"
+                  >About us</a
+                >
+              </li>
+            </ul>
           </div>
-           
-         </nav>
+          <div>
+            <form class="d-flex" role="search">
+              <button
+                id="logout"
+                class="btn"
+                type="submit"
+                style="color: #b43deb; border: none; font-weight: 600"
+              >
+                <a
+                  class="nav-link"
+                  href="http://127.0.0.1:5502/pages/login.html"
+                  style="color: #b43deb"
+                >
+                  <i class="bi bi-door-open-fill" style="color: #b43deb"></i
+                  >Logout</a
+                >
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
       
           <!-- sidebar -->
          
-       <div class="sidebar" id="sidebar"></div>
+       <!-- <div class="sidebar" id="sidebar"></div> -->
           <!-- containar -->
              
           <div class="content-containar">
@@ -127,14 +223,12 @@ background-color:black;
       <!---------------------end header---------------------->
           <div class="row">
           
-              <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4" >
-      
+        <main class="col-md-9 ml-sm-3 col-lg-10 px-md-4">      
                <!------------------------body----------------------------->
                <div class="container text-center profile-col">
                 <div class="row">
-                  <div class="col-12 col-md-4  mt-5 full-height left-col">Contact us
-                    <p class="Personal-Info">Contact At </p>
-      
+                  <div class="col-12 col-md-4  mt-5 full-height left-col" style=" font-family:'BankaiDemoVersion';">
+                    <p style="text-decoration: underline; color: white; margin-top: 10rem;"> Contact us:</p>
                     <div class="menu-profile">
                      <div class="divEdit">
                       <li class="liprofile"><i class="fa-solid fa-user profile-icon"></i> OtakuYume.com
@@ -142,7 +236,7 @@ background-color:black;
                       </li>
                     </div>
                     <div class="divPass">
-                      <li class="liprofile liDown"><i class="fa-solid fa-key Password-icon"></i> 06-460-8888
+                      <li class="liprofile liDown"><i class="fa-solid fa-key Password-icon" style="color: #b43feb;"></i> 06-460-8888
                       <!-- <a href="" class="link linkDown"><i class="fa-solid fa-chevron-right"></i></a> -->
                       </li>
                     </div>
@@ -185,69 +279,7 @@ background-color:black;
                 </div>
               
               </div>
-              <!----------------------------body------------------------------->
-              <!-----------------------------footer----------------------->
-      
-              <footer class="text-center bg-body-tertiary">
-                <!-- Grid container -->
-                <div class="container pt-4">
-                  <!-- Section: Social media -->
-                  <section class="mb-4">
-                    <!-- Facebook -->
-                    <a
-                      data-mdb-ripple-init
-                      class="btn btn-link btn-floating btn-lg text-body m-1"
-                      href="#!"
-                      role="button"
-                      data-mdb-ripple-color="dark"
-                      ><i class="fab fa-facebook-f"></i
-                    ></a>
-              
-                    <!-- Twitter -->
-                    <a 
-                      data-mdb-ripple-init
-                      class="btn btn-link btn-floating btn-lg text-body m-1"
-                      href="#!"
-                      role="button"
-                      data-mdb-ripple-color="dark"
-                      ><i class="fab fa-twitter"></i
-                    ></a>
-              
-                    <!-- Google -->
-                    <a
-                      data-mdb-ripple-init
-                      class="btn btn-link btn-floating btn-lg text-body m-1"
-                      href="#!"
-                      role="button"
-                      data-mdb-ripple-color="dark"
-                      ><i class="fab fa-google"></i
-                    ></a>
-              
-                    <!-- Instagram -->
-                    <a
-                      data-mdb-ripple-init
-                      class="btn btn-link btn-floating btn-lg text-body m-1"
-                      href="#!"
-                      role="button"
-                      data-mdb-ripple-color="dark"
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-              
-                    
-                 
-                  </section>
-                  <!-- Section: Social media -->
-                </div>
-                <!-- Grid container -->
-              
-                <!-- Copyright -->
-                <div class="text-center p-3" style="color: whitesmoke;">
-                  © 2024 Copyright:
-                  <a style="color: rgb(98, 98, 98);" >anime movie.com</a>
-                </div>
-                <!-- Copyright -->
-              </footer>
-                  <!-------------------------------->        
+              <!----------------------------body------------------------------->   
       
             </main>
           </div>  
@@ -255,7 +287,30 @@ background-color:black;
          </div>
       
       </div>
-      
+        <!-----------------------------footer----------------------->
+    <footer
+      class="text-center text-white py-3 mt-auto"
+      style="box-shadow: 1px 1px 1px #000000; font-family:'BankaiDemoVersion';"
+    >
+      <div class="container">
+        <!-- Social media icons -->
+        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"
+          ><i class="fab fa-google"></i
+        ></a>
+        <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <!-- Copyright notice -->
+        <div style="color: whitesmoke">© 2024 OkatuYume.com</div>
+      </div>
+    </footer>
+    <!-------------------------------->
       
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       
