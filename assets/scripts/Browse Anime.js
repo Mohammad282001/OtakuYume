@@ -58,21 +58,16 @@ function renderAnime(animeList) {
     const cardParent = document.createElement("div");
     const card = document.createElement("div");
     cardParent.className = "col";
-    cardParent.style.justifyContent = "center";
     card.className = "card";
-    card.style.width = "18rem";
-    card.style.height = "30rem";
-    card.style.borderColor = "rgb(33, 37, 41)";
-    cardParent.style.display = "flex";
-    cardParent.style.justifyContent = "center";
+
     card.innerHTML = `
       <a href="Movie detiles.html?animeId=${anime.id}&uu=99">
         <img src="${anime.imageUrl}" class="card-img-top" alt="..." style="max-height:20rem">
       </a>
       <div class="card-body" style="background-color:rgb(33, 37, 41); height:10rem;">
-        <p style="color:#ffffff;">${anime.title}</p>
+        <p class="card-text-title" style="color:#ffffff;">${anime.title}</p>
         <p class="card-text" style="color:#ffffff;">Episodes: ${anime.episodes}</p>
-        <p class="card-text" style="color:#ffffff;">&#9733; ${anime.score}</p>
+        <p class="card-text1" style="color:#ffffff;">&#9733; ${anime.score}</p>
       </div>
     `;
     cardParent.appendChild(card);
